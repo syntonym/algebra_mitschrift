@@ -584,16 +584,63 @@ $\Rightleftarrow$ Produkt liegt in $I$ wenn mindestens einer der Faktoren bereit
 $\Rightleftarrow I$ besitzt kein Überideal $\neq R$.
 \item $I$ heisst Radikal oder Wurzelideal $\Rightleftarrow \forall x \in R$ mit $x^m \in I$ für ein $m \in \mathbb{N}$ gibt es bereits x \in $I$
 $\Rightleftarrow I=\sqrt{I}$
+\end{enumerate}
 
 \subsection{Beispiel}
+%TODO Hier ist noch nicht fertig
 \begin{enumerate}[]
-\item $R = \mathbb{Z}
+\item $R = \mathbb{Z}$
+\end{enumerate}
+
+%Start 7.1.14
 
 
+\section{Kapitel III Körpererweiterungen}
+\subsection{Bemerkung}
 
+Unterschied zu beliebigen Ring: In einem Körper sind alle Elemente ausser 0 multiplikativ invertierbar.
 
+\subsection{Bezeichnung}
+Ist $K$ Körper, so bezeichne $K[x] = \{ P(x) = \sum{i=0}^d a_i x^i , ai \in K, d\in \mathbb{N}$
+ein Polynomring über $K$ in einer Variblen x mit x Symbol/Platzhalter.
+Analog: $K[x_1, ..., x_n] = K[x_1, ... , x_{n-1}][x_n]$ Polynomring in $n$ Variablen.
 
+\subsection{Definition (Körper)}
+$K$ kommutativer Ring $\neq 0$ heisst Körper $\Rightleftarrow$ $K^* = \modulus{K}{\{0\}$ 
+$\Rightleftarrow$ alle Elemente $\neq$ 0 von K sind invertierbar
+(Schiefkörper, wenn nicht kommutativ)
+\subsection{Beispiele}
+\begin{enumerate}[]
+\item $\mathbb{Q}, \mathbb{R}, \mathbb{C}, \modulus{\mathbb{Z}}{p\mathbb{Z}} = \mathbb{F}_p$
+\item $\modulus{R}{m}, R$ Ring, $m \subseteq R$ maximales Ideal.
+\end{enumerate}
 
+Insbesondere: $K$ Körper, $K[x]$ HIR, $P \in K[x]$ irreduzibles Polynom $m = <p>$
+von P erzeugtes Ideal ist Primideal und damit auch maximal (da $K[x]$ faktoriell),
+also ist $L := \modulus{K[x]}{m}$ wieder Körper. 
+Etwa $K = \mathbb{R}$, $P(x) = x^2 + 1$ irreduzibel über $\mathbb{R}$
+$\modulus{\mathbb{R}[x]}{<x^2 + 1>} = \mathbb{R}[\bar{x}]$
+$\bar{x}$ Restklasse von x erfüllt die Gleichung $\bar{x}^2 + 1 = 0$, also $\bar{x}^2 = -1$.
+Damit $\mathbb{R}[\bar{x}] = \mathbb{R}[i] = \mathbb{C} = \mathbb{R} \bigoplus \mathbb{R}i$
+
+\subsection{Notation}
+
+In $\subsection{Q}$ kann man nicht aus allen positiven Zahlen Wurzeln ziehen,
+zudem ist $\mathbb{Q}$ nicht vollständig, 
+daher "Erweiterung" von $\mathbb{Q}$ auf $\mathbb{R}$ vollständig.
+Um auch Wurzeln aus negativen Zahlen ziehen zu können, erweitert man nochmal von
+$\mathbb{R}$ auf $\mathbb{C}$, vollständig und algebraisch abgeschlossen 
+(Jedes (nicht konstante) Polynom in \mathbb{C}[x] hat eine Nullstelle in $\mathbb{C}$)
+Also: $\mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{C}$ Inklusionen von Körpern.
+
+\subsection{Definition (Körpererweiterung)}
+Sei $L$ ein Körper und $K \subseteq L$ ein Unterring 
+(also mit er von $L$ induzierten Verknüpfung ist $K$ ein Ring)
+$K \subseteq L$ heisst Körpererweiterung $\Rightleftarrow$ 
+$K$ ist Körper, also bzgl. Inversionsbildung abgeschlossen (mit Ausnahme von 0)
+$\Rightleftarrow$ $K \subseteq L$ ist Unterkörper $\Rightleftarrow$ $L$ ist Oberkörper von $K$.
+
+\subsection{Bemerkung}
 
 \end{document}
 
