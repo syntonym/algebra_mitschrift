@@ -1,0 +1,599 @@
+\documentclass[12pt,a4paper,ngerman]{scrreprt}
+\usepackage{ngerman,amssymb,amstext, amsmath}
+\usepackage{enumerate}
+
+\newcommand{\gdw}{\Leftrightarrow}
+
+\begin{document}
+\title{Algebraische Strukturen}
+\subtitle{Mitschrift}
+\author{Simon Haendeler}
+\maketitle
+%\tableofcontents
+%TODO Sinnvolle Gliederung für den Inhalt (welche Sachen werden in das Inhaltsverzeichnis aufgenommen)
+\setcounter{chapter}{-1}
+\chapter{Allgemeine Definitionen und Notationen}
+Wir setzen den Begriff der Menge vorraus.
+
+Seien $X$, $Y$ Mengen. Eine Abbildung $F: X \to Y, x \mapsto y = f(x)$ ist eine "`Zuordnung"' die jedem Element $x \in X$ genau ein $y \in Y$ zuordnet.
+Genauer: $\Gamma(f)$ von $f$ als Teilmenge des kartesischen Produktes $\Gamma(f) \subset X \times Y$ mit folgender Bedingung $\forall x \in X \exists _1  y \in Y$ mit $(x,y) \in \Gamma(f)$.
+
+\section{Bemerkung:}
+Vielfach werden Objekte in der Mathematik konstruiert, oder durch ihre Eigenschaften eindeutig festgelegt. Axiomatische Defintion des Kartesischen Produktes von Mengen durch die Universelle Eigenschaft:
+
+
+Seien $X, Y$ zwei Mengen. 
+Eine Menge $Z$ gemeinsam mit Abbildung
+\begin{enumerate}[]
+\item $\pi: Z \to X$ ($\widehat{=}$ Projektion auf den ersten Faktor) und 
+\item $\tau: Z \to Y$ ($\widehat{=}$ Projektion auf den zweiten Faktor)
+\end{enumerate}
+heisst kartesisches Produkt von $X$ mit $Y$ wenn folgende Universelle Eigenschaft erf"ullt ist: F"ur alle Mengen $W$ mit Abbildung $\alpha: W \to X$ und $\beta: W \to Y$ existiert folgendes kommutative Diagramm.
+
+%TODO kommutatives Diagramm einf"ugen
+
+\section{Bemerkung:}
+\begin{enumerate}[(a)]
+\item Wenn ein kartesisches Produkt exestiert (bei Mengen ist dies der Fall), so ist es eindeutig bis auf eine eindeutige Isomorphie (ohne Beweis). 
+
+\item Die Menge der Paare $X \times Y$ zusammen mit den beiden Projektionen $\pi X \times Y \to X (x,y) \mapsto x$ und $\tau X \times Y \to Y (x,y) \mapsto y$ erf"ullt die universelle Eigenschaft.
+\end{enumerate}
+
+\section{Definition Verkn"upfung:}
+
+Sei $X$ eine Menge und $X \times X$ das kartesische Produkt von $X$ mit sich selbst.
+Eine (bin"are) Verkn"upfung auf $X$ ist eine Abbildung 
+$\mu: X \times X \to X (x,y) \mapsto \mu(x,y) = z$
+
+\section{Beispiele}
+
+\begin{enumerate}[(1)]
+\item Addition oder Multiplikation auf $\mathbb{Z}$ oder $\mathbb{R}$ \\ $\mu(x,y) = X+Y$\\
+\item Die Matrizenmultiplikation auf $GL_n(K)$, K K"orper \\ $\mu(A,B) = A*B$\\
+\item Kompositionen von Endomorphismen eines K"orper-Vektorraumes $V$.\\
+$f,g \in End_K(V) = \{ h:V\to V | $h lineare Abbildung $\}$\\
+$\mu (f,g) = f \circ g = fg$\\
+\end{enumerate}
+
+\section{Definition Verkn"upfungsgebilde:}
+
+Ein Verkn"upfungsgebilde ist eine Menge $X$ zusammen mit einer Verkn"upfung
+$\mu: X \times X \to X $ geschrieben $X = (X\mu)/(X,+)/(X,\circ)/(X,\times)/(X,*)$
+
+\section{Bemerkung:}
+
+Eine Menge kann auch mehrere Verkn"upfungen besitzen, etwa $(\mathbb{Z},+)$ und $(\mathbb{Z},.)$
+
+Das Gebiet Algebra ist das Studium von Verkn"upfungsgebilden mit speziellen Eigenschaften. Entsprechend gibt es verschieden Begriffe/Objekte, wobei auch "aussere Verkn"upfungen zugelassen werden
+bzgl. einer zweiten Menge $R$, gegeben durch eine Abbildung $\lambda: R \times X \to X; (r,x) \mapsto \lambda(r,x)$ (Skalarmultiplikation)
+
+Die wichtigsten Objekte in der Algebra sind:
+
+\begin{enumerate}[]
+
+\item Jeweils eine Verkn"upfung:
+
+\begin{enumerate}[]
+\item Monoide
+\item Gruppe
+\end{enumerate}
+
+\item Jeweils zwei innere Verkn"upfungen:
+
+\begin{enumerate}[]
+\item K"orper
+\item Ringe
+\end{enumerate}
+
+\item Jeweils eine innere und eine "aussere Verkn"upfung bzgl. eines Ringes oder eines K"orpers
+
+\begin{enumerate}[]
+\item Vektorr"aume
+\item Moduln
+\end{enumerate}
+
+\item Drei Verkn"upfungen: zwei innere, eine "aussere
+
+\begin{enumerate}[]
+\item Algebren
+\end{enumerate}
+
+\end{enumerate}
+
+\section{Definition:}
+
+Abbildungen zwischen solchen Algebraischen Objekten/algebraischen Strukturen heissen Homomorphismen wenn sie mit der gegeben Verkn"upfung vertr"aglich sind.
+
+%Zweite Vorlesung: 7.8.2013
+
+\section{Definition "Aquivalenzrelation}
+Sei $X$ eine Menge. Eine "Aquivalenzrelation auf $X$, geschrieben $\sim$ oder $x \sim y$, ist eine Teilmenge $R \subset X\times X$ , bestehend aus den Paaren $(x,y)$ mit $x \sim y$, die folgende Bedinungen erf"ullt:
+\begin{enumerate}
+\item reflexiv: $\forall x \in X: x\sim x$ (oder: $(x,x) \in R$)
+\item symmetrisch: gilt $x\sim y$ so auch $y \sim x$ \\ (oder: $(x,y) \in R \gdw (y,x) \in R$)
+\item transitiv: $\forall x,y,z$ in $X$ gilt $x \sim y$ und $y \sim z$ so auch $x \sim z$ \\ (oder auch: $(x,y),(y,z) \in X \Rightarrow (x,z)\in R$)
+\end{enumerate}
+Ist $x \in X $, so heisst $\bar{x} = [x] = {y \in X, y\sim x}$ die "Aquivalenzklasse (Restklasse) bez"uglich~$\sim$. Die Menge aller "Aquivalenzklassen wird mit $X/\!\sim  = 
+X /R$ bezeichnet.
+%TODO Menge aller "Aquivalenzklassen sch"oner machen
+
+\section{Beispiel}
+%TODO Besser formatieren
+
+Sei $m \in \mathbb{Z}$. Definiere $x \sim y :\gdw x-y \in m \mathbb{Z} \gdw m$ teilt $x-y$
+Schreibweise $\mathbb{Z}/\sim = \mathbb{Z}/m\mathbb{Z} = \mathbb{Z}_m = \{\bar{0}, \bar{1}, ..., \bar{m-1}\}$
+
+\section{Bemerkung:}
+%TODO Besser formatieren (Absätze)
+
+Ist $\sim$ eine "Aquivalenzrelation auf $X$, und sei $f: X \to Y$ eine Abbildung, dann existiert eine Induzierte Abbildung $\bar{f}: X/\sim \to Y$ mit kommutativem Diagramm 
+%TODO Menge aller "Aquivalenzklassen sch"oner machen
+%TODO Kommutatives Diagramm einf"ugen
+genau dann, wenn $\forall x, y \in X $ mit $x \sim y$ gilt: $f(x) = f(y)$.
+
+(Also: "Aquivalente Elemente haben das gleiche Bild unter $f$)
+
+Man sagt dann: $f$ faktorisiert "uber $\sim$ oder "uber $X/\!\sim$. Falls $\bar{f}$ exestiert, ist es eindeutig und gegeben durch: $\bar{f}(\bar{x}):=f(x)$
+
+\section{Beweis}
+%TODO Der Beweis ist schlecht formatiert. Insb. Einr"uckungen, Absätze und Abstände
+%TODO Latexzeichen für := und =: einsetzen
+
+$\Rightarrow$
+
+Sei $\bar{f}: X/\!\sim \to Y$ gegeben und seien $x,y \in X$ mit $x\sim y$. Zu Zeigen: $f(x) = f(y)$
+Aber: Da Diagramm kommutiert gilt:
+$f=\bar{f}\circ \pi$, also $f(x)=\bar{f} \circ \pi(x) =$
+$\bar{f}(\bar{x}) = \bar{f}(\bar{y}) = \bar{f}(\pi(y)) = \bar{f} \circ \pi(y) = f(y)$
+
+$\Leftarrow$
+
+Es gelte $f(x) = f(y)$ f"ur alle $x,y \in X$
+%TODO Das hier ist komisch. Es exestiert bar{f} ohne eigenschaften
+Zu Zeigen $\exists \bar{f}$
+Definiere $\bar{f} X/\!\sim \to Y$ durch $\bar{x} \mapsto f(x)$
+
+Ausf"urlich:
+
+%TODO Hier stimmt irgendwie was nicht so ganz...
+$\bar{x} = \{z\in X, z \sim x \} \subseteq X $Teilmenge$ =: Ax$
+$X/\sim = \{Ax | x\in X\}$ und $\bar{f}(Ax) := f(x)$ durch die Wal eines Elementes $x \in Ax$
+Achtung: Dieses x ist nicht eindeutig durch Ax gegeben, denn 
+$z \sim x \Leftrightarrow Ax = Az$
+z.z. Definition von $\bar{f}$ ist wohldefiniert, also 
+unabh"angig von der Wahl des Repr"asentanten.
+Damit ist zu zeigen $x \sim z \Rightarrow f(z) = f(x)$
+Dies ist aber gerade die Vorrausetzung im Lemma. 
+Finde dazu Beispiele!
+
+
+\chapter{Gruppen:}
+\section{Beispiele:}
+\begin{enumerate}[]
+\item (\{1\}, *),  (\{0\},+) Triviale Gruppen
+\item $(\mathbb{Z},+),(\mathbb{Q},+), (\mathbb{R}, +), (\mathbb{C}, +)$
+\item $(\mathbb{Q}^{*}, *) = (\mathbb{Q}$\textbackslash$\{0\}, *), (\mathbb{R}^*,*), (\mathbb{C}^*,*), (S^1, *), (\{\pm 1\},*)$
+\item $(\{\sqrt[k]{1}\}, *)$ kte Einheitswurzeln, $k \in \mathbb{N}$
+\item $(GL_n(k), *) \forall $ K"orpe, $(SL_n(K), *), (O_n (\mathbb{R}),*), (U_n(\mathbb{C}), *)$
+\item $(S_n,\circ)$ Permutationen "uber 1...n Elemente.
+\end{enumerate}
+
+\section{Gegenbeispiele:}
+
+$(\{1\},+),(\mathbb{Z},*),(\mathbb{R},*),(\mathbb{N}+),(M_n(\mathbb{R}),*), (Enx(x), \circ), Pot(X), \cup ), (\mathbb{R}, sup),$ ...
+
+\section{Definition Gruppe}
+
+Eine Gruppe ist eine Menge $G$ zusammen mit einer bin"aren Verkn"upfung $G\times G \to G$ : $ (x,y)\mapsto x \circ y$
+(meistens Addition oder Multiplikation oder Komposition), sodass folgende Axiome erf"ullt sind:
+
+\begin{enumerate}[({G}1)]
+\item Assoziativit"at: $(x\circ y) \circ z = x \circ (y \circ z) \forall x,y,z \in G$
+\item Neutrales Element: $\exists e = 1 = 1_G = \mathbb{1} = e_G \in G x \circ e = x = e \circ x \forall x \in G$
+\item Inverses Element: $\forall x \in G \exists y \in G$ mit $ x \circ y = y \circ x = e$ Schreibweise: $y = x^{-1}$
+\\ $G$ heisst kommutativ wenn zus"atzlich gilt:
+\item Kommutativit"at $ x \circ y = y \circ x \forall x,y \in G$ (auch: $G$ ist abelsch)
+\end{enumerate}
+
+\section{Bemerkung}
+%TODO Entscheiden ob die kurzen Rechnungen in einzelnen Zeilen bleiben sollen.
+\begin{enumerate}[(a)]
+\item Schreibweise $x \circ y = x+y / x*y = xy / x \circ y$
+\item Das Neutralelement ist eindeutig. Seien $e,e'$ zwei neutrale Elmente, dann: 
+$$ e = ee' = e'$$ da $e$ und $e'$ neutral
+
+\item Das inverse Element ist auch eindeutig
+$$e^{-1} = e$$
+$y,z \in G$ Inverse zu x, dann $$y=ye = y(xz) = (yx)z = ez = z$$
+
+\item $y \in X$ heist Rechtsinverse zu $x \in X \Leftrightarrow x \circ y = e$ Linksinverse Analog
+\end{enumerate}
+
+\section{Definition Monoid:}
+
+Ein (assoziatives) Monoid $M$ ist eine Menge $M$ zusammen mit einer (bin"aren) Verkn"upfung 
+$M \times M \to M: (x,y) \mapsto xy$ sodass folgende Axiome erf"ullt sind:
+
+\begin{enumerate}[({M}1)]
+\item Assoziativit"at: $\forall x,y,z \in M: (x \circ y) \circ z = x \circ ( y \circ z)$
+\item neutrales Element: $\exists e \in M$ mit $e \circ x = x \circ e = x \forall x\in M$
+\end{enumerate}
+
+\section{Bemerkung}
+
+\begin{enumerate}[(a)]
+%TODO hier fehlt was. "Nur m1 \to M Halbgruppe (M = assoziative UG)" Oder so
+\item H"aufig werden Gruppen (Monoide) mit einer zus"atzlichen Strukut versehen, etwa mit einer Topologie
+oder mit einer differenzierbaren Strukutur ($\to$ Topologische Gruppe, Mannigfaltigkeit, Lie-Gruppe)
+
+\item Ist $M$ Monoid und x rechts und links invertierbar, so ist x bereits invertierbar. 
+Sind alle Elemente von $M$ invertierbar, so ist M bereits eine Gruppe.
+\end{enumerate}
+
+\section{Beispiele:}
+\begin{enumerate}[(a)]
+\item $X$ Menge, $M = End(X) = \{f: X\to X Abbildung\}$ mit Komposition ist Monoid, aber keine Gruppe.
+\item $(\mathbb{N},+)$ Monoid
+\item $(\mathbb{R},*)$ Monoid
+\item Ist $M$ Monoid, so ist $M^* = \{x \in M, x$ invbar $\}$ bereits eine Gruppe.
+\end{enumerate}
+
+\section{Definition Gruppenhomomorphismus}
+Seien $(G,+),(H,*)$ zwei Gruppen und $f: G \to H$ eine Abbildung. $f$ heist Gruppenhomomorphismus oder multiplikativ/additiv 
+oder Strukturerhaltend oder mit der Algebraischen Strukut vertr"aglich,
+wenn $f(x+y) = f(x)*f(y) \forall x,y \in G$
+
+\section{Definition Untergruppe}
+
+Eine Teilmenge $H$ einer Gruppe $G$ heisst Untergruppe wenn gilt:
+
+\begin{enumerate}[({UG}1)]
+\item Verkn"upfung von $G$ induziert Verkn"upfung $H \times H \to H auf H$. (man sagt: $H$ ist unter der Verkn"upfung von $G$ abgeschlossen)
+\item $1_G \in H $ (dann ist automatisch $1_G$ neutral in H)
+\item $\forall x \in H$ ist $x^{-1} \in G $ bereits in $H$. (man sagt: $H$ ist abgeschlossen unter Inversenbildung)
+\end{enumerate}
+
+\section{Beispiel:}
+\begin{enumerate}[(1)]
+\item $(\{1_G\}, *) \subseteq (G, *)$ triviale Untergruppe
+\item $(G, *) \subseteq (G,*)$ %TODO das macht irgendwie nicht viel Sinn. Abschreibfehler?
+\item $(\mathbb{Z}, +) \subseteq (\mathbb{Q}, +) \subseteq (\mathbb{R}, +) \subseteq (\mathbb{C}, +)$ aufsteigende Kette von UG
+\item $SL_n(\mathbb{R}) \subseteq GL_n(\mathbb{R}) \subseteq (GL_n\mathbb{C}, +)$
+\item $C^\infty Diffeome(\mathbb{R}, \mathbb{R}) = \{f: \mathbb{R} \to \mathbb{R}, C^\infty, bijektiv, f^{-1} C^\infty\} \subseteq$ Stetige Bijekionen $(\mathbb{R}, \mathbb{R})$
+$\subseteq$ Bijektionen $(\mathbb{R}, \mathbb{R})$
+\item $(\mathbb{Q}^* , *) \subseteq (\mathbb{R}^*, *) \subseteq (\mathbb{C}^*, *)$
+\item $k,m \in \mathbb{N} (\sqrt[k]{1}, *) \mathrel{\widehat{=}}$ komplexe k-te Einheitswurzeln $ \subseteq (\sqrt[km]{1},*)$
+\item $Diag_n(K) = \{\lambda 1_n , \lambda \in K^*\} \subseteq GL_n(K)$
+\end{enumerate}
+
+\section{Definition Normale Untergruppe}
+Sei $H\subseteq G$ Untergruppe. Dann heisst $H$ normal in $G$ oder Normalteiler geschrieben $H \trianglelefteq G$, wenn $H$ unter Konjugation mit Elementen aus $G$ abgeschlossen ist.
+$\forall x \in G : xHx^{-1} \subseteq H$ wobei $xHx^{-1} = \{xyx^{-1}, y \in H\}$ "Aquivalent dazu: $\forall x \in G: xHx^{-1} = H$ oder
+$\forall x \in G : xH = Hx$
+
+\section{Beispiele:}
+\begin{enumerate}[(1)]
+\item Jede Untergruppe einer kommutativen Gruppe ist normal.
+\item $1,G \subseteq G$ sind normal.
+\item $\{\lambda * 1_n, \lambda \in K^* \} \subseteq GL_n(K)$
+Es gilt $\forall A \in GL_n(K) : (\lambda 1_n) A = A*(\lambda 1_n) (!)$
+%TODO hier fehlt was "und und ist H \subseteq G normal" ? 
+\item $H \subseteq GL_n(K) \cong GL(K^n)$ Dann ist $H$ normal, wenn $H$ unabhängig von der Wahl einer Basis in $K^n$ definiert werden kann.
+$H$ normal: $\forall A \ in H \forall p \in GL_n(K) PAP^{-1} \in H$
+\item $S_n = Bij(\{1, ... ,n\})$ Permutationsgruppe. Sei $\sigma, \tau \in S_n$ 
+Dann ist $\tau \sigma \tau ^{-1}$ jene Permutation, die man aus $\sigma$ erhält, wenn man die Zahlen $(1, ... ,n)$ mit $\tau$ permutiert (finde Beispiele).
+%TODO Diagramm einfügen
+Sei $H \subseteq S_n$ die Untergruppe jener Permutationen $\sigma \in S_n$ mit $\sigma (1) = 1$ (ist Untergruppe(!)).
+Diese Untergruppe ist nicht normal, da sie von der Nummerierung der Zahlen 1...n abhängt.
+\end{enumerate}
+
+\section{Bemerkung}
+Intuitiv bedeutet normale Untergruppe, dass die Definition unabhängig von der Bennenung der Elemente von $G$ definiert werden kann.
+
+\section{Definition Faktorgruppe}
+Sei $G$ Gruppe und $H \trianglelefteq G$ normale Untergruppe. 
+Es bezeichnet $G/H := \{xH, x\in G\}$ mit $xH=\{xy, y\in H\}$ die Menge der Rechtsnebenklassen von G modulo H, geschrieben $xH = \bar{x} = [x]$
+(das sind "Aquivalenzklassen von Elementen $x$ von $G$ bzgl. der "Aquivalenzrelation $x \sim z \Leftrightarrow xH=zH (!)$)
+Auf $G/H$ wird durch $(xH)(zH) = (xzH)$ oder auch geschrieben $\bar{x} *\bar{z} = \bar{xz}$, eine Gruppenstruktur definiert.
+$G/H$ mit dieser Verknüpfung heisst Faktorgruppe von $G$ nach $H$.
+
+\section{Bemerkung:}
+\begin{enumerate}[(a)]
+\item Diese Konstruktion funktioniert nur für normale Untergruppen.
+\item Ist $G$ kommutativ so ist $G/H$ definiert für alle Untergruppen $H$ von $G$.
+\item Ist die Gruppe $G$ additiv so schreiben wir $\bar{x} = x+H = H+x$. 
+Beispielsweise $(\mathbb{Z}, +)$ mit Restklassengruppe $\mathbb{Z}_K = \mathbb{Z} / K \mathbb{Z} = a+K\mathbb{Z} = \bar{a}$
+\end{enumerate}
+
+\section{Beweis:}
+\begin{enumerate}[(1)]
+\item Multiplikation auf $G/H$ ist wohldefiniert, d.h. unabh"angig von der Wahl des Repr"asentanten
+Seien $x,x',z,z' \in G$ mit $xH=x'H$ und $zH=z'H$. Dann ist zu zeigen: $xzH = x'z'H$ Aber $xzH = x(zH) = x(z'H) = x(Hz') = xHz' = (xH)z' = (x'H)z' = Hx'z' = x'z'H$
+\item Verkn"upfung assoziativ einfach
+\item neutrales Element von $G/H$: $1_{G/H}= 1_gH =\bar{1}_G$. Zeige, dass dies das neutrale Element ist.
+\item Inverses Element $zxH=\bar{x} (xH)^{-1} = x^{-1}H=\bar{x^{-1}}$ %TODO Hier stimmt irgendwas nicht
+\end{enumerate}
+
+\section{Beispiel:}
+%TODO irgendwie unvollständig oder nicht so sehr verständlich?
+$A_n = \{$alternierende Permutationen$\} \subseteq S_n$ ist Normalteiler, dann hat $\sigma \in S_n$ $sgn=1$, so auch $\tau \sigma^{-1},$ da $sgn$ multiplikativ ist.
+Damit ist $S_n/A_n$ Faktorgruppe.  (man zeigt leicht: $S_n/A_n \cong (\{\pm 1\},*)$)
+
+\section{Erinnerung}
+$G,H$ Gruppen $f: G\to H$ Abb. heisst Gruppenhomomorphismus/multiplikativ wenn
+\begin{enumerate}[({GH}1)]
+\item $f(1_G) = 1_H$
+\item $f(xy) = f(x)f(y) \forall x,y \in G$
+\end{enumerate}
+Die Verknüpfungen können auf $G$ und $H$ ganz verschieden sein, etwa 
+$f:$ \mbox{$(\mathbb{R},+) \to (\mathbb{R}^*,*);$} \mbox{$x \mapsto exp(x) = e^x$} $f(x+y) = f(x) * f(y)$
+
+\section{Definition Kern und Bild}
+Ist $f: G \to H$ Gruppenhomomorphismus, so nennen wir $\{x \in G, f(x) = 1_H\}$ den Kern von f oder $kern(f)$ und
+$\{y \in H, \exists x \in G : f(x) = y\}$ das Bild von F oder $Im(f)$.
+
+\section{Satz}
+Sei $f: G \to H$ Grupenhomomorphismus. Dann gilt:
+\begin{enumerate}[(a)]
+\item $kern(f) \trianglelefteq G$ normale Untergruppe
+\item $Im(f) \leq H$ nur Untergruppe (im allgemeinen nicht normal)
+\end{enumerate}
+
+\section{Beweis}
+Siehe Proseminar. Hier: $kern(f)$ ist normal.
+
+Sei also $x \in kern(f)$ und $y \in G$. Zu Zeigen: $yxy^{-1}\in kern(f)$. Aber $f(yxy^{-1}) = f(y)f(x)f(y^{-1}) = f(y) 1_H f(y^-1) = f(y)f(y^{-1}) = f(y)f(y)^{-1} = 1_H$
+
+\section{Homomorphiesatz für Gruppen}
+Sei $f: G \to H$ Gruppenhomomorphismus. Dann ist die induzierte Abbildung $\bar{f}: G/kern(f) \to Im(f); \bar{x} \mapsto f(x)$
+ein wohldefinierter Gruppenisomorphismus mit zugehörigem kommutativem Diagramm:
+%TODO hier kommutatives Diagramm einfügen
+
+\subsection{Bemerkung}
+Die kanonische Abbildung $\pi$ $G \to G/kern(f) $ ist ein surjektiver Gruppenhomomorphismus.
+
+\subsection{Beweis}
+\begin{enumerate}[(a)]
+\item Wohldefiniert: Zu Zeigen: $\bar{x} = \bar{z} \Rightarrow \bar{f}(\bar{x}) = f(x) = f(z) = \bar{f}(\bar{z})$ $\forall x,z \in G$
+Setze $ K = kern(f)$ dann $ \bar(x) = \bar{z} \Leftrightarrow  xK = zK $ Insbesondere $ \exists y \in K mit x = zy$. 
+Damit ist $f(x) = f(zy) = f(z)f(y) = f(z) 1_H = f(z)$
+
+\item $\bar{f}$ ist Gruppenhomomorphismus. Selbst nachprüfen(!)
+
+\item $\bar{f}$ surjektiv. 
+Sei $w \in Im(f)$ wähle $x \in G$ mit $f(x) = w$. 
+Dann gilt $\bar{f}(\bar{x}) = f(x) = w$, also ist $f$ surjektiv.
+
+\end{enumerate}
+\section{Definition}
+%TODO <s> besser machen (< und > näher an s)
+%TODO Betragsstriche besser machen
+Sei $G$ eine Gruppe, $s \in G$. 
+Dann bezeichnet $<s>$ die von $s$ erzeugte Untergruppe von G. 
+$<s> = \{s^k | k \in \mathbb{Z}\} \subseteq G$ 
+(Dies ist wirklich eine Untergruppe von G aufgrund. $s^i + s^j = s^{ij} $und$ s^{-i} \in <s>$)
+$G$ heisst zyklisch falls $\exists s \in G: <\!s\!>=G$
+Wir setzen $ord_G(s) = |<\!s\!>_G|$
+
+\subsection{Bemerkung}
+Gilt $ord_G(s) = k \Rightarrow s^k = 1_G$
+Es ist n"amlich $<s> = \{1,s,s^2, ... , s^{k-1}\}$
+%TODO hier fehlt etwas
+$s^k = s^l mit 0 \geq ??? \geq ???$
+
+\subsection{Beispiel}
+$(\mathbb{Z}, +): \mathbb{Z} = \{k*1 | k \in \mathbb{Z} \} = <1>$
+$(\mathbb{Z} / n\mathbb{Z} , +) \mathbb{Z} / n\mathbb{Z} = \{k (1^+ n \mathbb{Z}) | k \in \mathbb{Z}\}$
+
+\section{Satz}
+\begin{enumerate}[(1)]
+\item Alle Untergruppen von $\mathbb{Z}$  sind von der Form 
+$n\mathbb{Z}$ f"ur $n \in \mathbb{N} \cup \inf$
+\item Alle Faktorgruppen von $\mathbb{Z}$ sind von der Form 
+$\mathbb{Z} / n\mathbb{Z}, n \in \mathbb{N} \cup \{0\}$
+\item Alle zyklischen Gruppen sind isomorph zu $\mathbb{Z}$ oder $\mathbb{Z}_n$ verm"oge:
+\begin{enumerate}[]
+\item $ f: \mathbb{Z} \to G; k \mapsto s^k $ wobei $G = <s>$ und $|G| = \inf$
+\item $ \bar{f}: \mathbb{Z}/n\mathbb{Z} \to G ; \bar{k} \mapsto s^k$ 
+wobei $G = <s>$ und $|G| = n$
+\end{enumerate}
+\end{enumerate}
+
+\subsection{Beweis}
+\begin{enumerate}[(1)]
+\item Sei $H$ eine Untergruppe von $\mathbb{Z}$.
+Falls $H = \{0\}$, so gilt $H = 0\mathbb{Z}$.
+Falls $H \neq \{0\}$, so enthält %hier fehlt was%
+mindestens ein $a \in H$ mit $a \neq 0$ o.B.d.A $a > 0$, den falls a $a < 0$,
+so liegt $-a \in H$ und $-a > 0$. 
+$H$ enhält ein kleinstes positives Element, welches wir mit $a$ o.B.d.A. schon gewählt haben.
+Behauptung: $H = a\mathbb{Z}$. Klarerweise gilt $a \in \mathbb{Z} \subseteq H$
+Sei $h \in H$. wir müssen zeigen $\exists q \in \mathbb{Z}: h = q*a$
+Wende die Division mit Rest auf $(h,a)$ an: h = q*a+r mit $q \in \mathbb{Z}, 0\leq r < a$
+Es ist $h,a \in H \to h-qa = r \in H.$
+Wegen der Minimalität von a muss $r = 0$ gelten.
+damit $h = q*a$ und weil $h \in H$ beliebig, folgt $H \subseteq a\mathbb{Z}$
+\item Aus $(1)$ folgt das alle ELemente %Hier fehlt was.
+\item Sei $G$ eine zyklische Gruppe, $G = <s>$. 
+$f: \mathbb{Z} \to G ; k \mapsto s^k$ 
+Dies ist ein Gruppenhomomorphismus von $(\mathbb{Z},+) \to (G,*)$ und surjektiv.
+Sei $H := kern(f)$. Dann ist $H = n\mathbb{Z}$ für ein $n \in \mathbb{N} \cup \{0\}$
+\end{enumerate}
+
+\subsection{Korollar:}
+\begin{enumerate}[1)]
+\item Jede Untergruppe einer zyklischen Gruppe ist zyklisch.
+\item Falls $G \cong \mathbb{Z}$ und $G = <s>$, 
+dann gilt $H = <s^m>$ für ein $m \in \mathbb{N} \cup \{0\}$
+\item Falls $G \cong \mathbb{Z}/n\mathbb{Z}$ für ein $n \in \mathbb{N}$ und $G = <s>$,
+dann gilt $H = <s^m>$ mit $m|n$
+\end{enumerate}
+\subsection{Beweis}
+$G \cong \mathbb{Z}$. Dann ist $H \cong m\mathbb{Z}$ für ein $m \in \mathbb{N} \cup \{0\}$
+und diese ist zyklisch $(H=<mk|k\in\mathbb{Z}>)$
+$G = \mathbb{Z}/n\mathbb{Z}$. Dann ist $|G|=n$. Ist $G=<s>$, so ist $s^n = 1_G$
+Für $H \leq G$ (H Untergruppe von G), $h,k \in H$ mit $h=s^a$, $k = s^b$,
+so enthält $H$ auch $s^{ggT(a,b)}$
+Sind $h_1, ..., h_n$ alle Elemente von $H$, mit $H_i = s^{ai}$, 
+so gilt $S^{ggT(a_1,...,a_r)} \in H$ und sogar $<s^{ggT(a_1,...,a_r)}> = H$. 
+Wegen $s^n = 1_G = 1_H \in H$ ist $n \in \{a_1, ... , a_r\}$ 
+und somit $ m = ggT(a_1, ... , a_r) | n$.
+Sei $G$ eine beliebige Gruppe (endlich)
+
+\subsection{Lemma}
+Sei $a \in G$ mit $ord_G(a) = n$, dann gilt $ord_G(at) = \frac{n}{ggT(n,t)}$
+
+\subsection{Beweis}
+Sei $d = ggT(n,t)$ und schreibe $n = dn'$ und $ggT(n',t') = 1$
+Sei $r = ord_G(t)$ %eventuell Fehler hier?
+Dann gilt: $1_G = \binom{t}{a}^r = a^{tr}$ und somit $tr = mn$ für ein $m \in \mathbb{N}$.
+Also ist $dt'r = dmn'$ und damit $t'r = mn'$. 
+Damit erhalten wir $n'/t'r$ und wegen $(n', t') = 1$ folgt $n'|r$, insbesondere $n' \leq r$
+Andererseits gilt $(a^t)^{n'} = a^{dt'n'} = {a^n}^{t'} = 1_G$ und somit $r \leq n'$
+Zusammen ergibt sich $n' - r$, d.h.: $ord_g(a^t) = n = n' = \frac{n}{d}$
+
+\section{Satz (Lagrange)}
+Sei $G$ eine endliche Gruppe, $H \leq G$ Untergruppe. Dann gilt $|H| | |G|$%TODO besser machen
+\subsection{Beweis}
+$G = \bigcup{x\in G}{xH}$ Falls $xH \cap yH \neq \emptyset$, 
+dann existieren $a,b \in H$ mit $xa = yb$.
+Daraus folgt $xaH = ybH \Rightarrow xH=yH$
+Es gilt $|xH| = |H|$ (denn Multiplikation mit $x \in G$ ist bijektiv) und daher
+$G = \bigcup{\bar{x} \in G}{\bar{x} H} \Rightarrow |G| = |G/H| * |H|$
+
+\subsection{Definition}
+Sei $G$ eine Gruppe, $S \subseteq G$ eine Teilmenge.
+Dann heisst $<s> = \bigcap{s \leq G}{H}$ die von $S$ erzeugte Untegruppe von $G$.
+(Damit die Definition gerechtfertigt ist, müssen wir nachweisen, dass der Durchschnitt beliebig vieler Untergruppen einer Gruppe wieder eine Untergruppe ist.)
+$Hi \leq G$ für $i \in I \Rightarrow \bigcap{i\in I}{Hi} \leq G$
+$1_G \subseteq Hi$ 
+$\forall i \Rightarrow 1_G \in \bigcap{i\in I}{Hi}$
+Sind $x,y \in \bigcap{i\in I} Hi$, so gilt $x \in Hi, y \in Hi, \forall i\in I $
+und daher auch
+$xy \in Hi, x^{-1} \in H, \forall i \in I$. 
+Dann folgt
+$xy, x^{-1} \in \bigcap{i\in I}{Hi}$
+%Folgendes ist Lückenhaft
+Exestiert eine Menge $S$ mit $|S| < \inf$ f"ur die $G=<s>$, so [...] endlich erzeugt.
+Achtung: $G$ endlich $\Rightarrow$ $G$ endlich erzeugt
+
+\subsection{Satz}
+Sei $G$ Gruppe, $s \subseteq G$, $S \neq \empty$. 
+Dann besteht $<s>$ aus allen endlichen Produkten von Elemente aus $S$ und $S^{-1}$ %???
+
+\subsubsection{Beweis}
+Sei $\bar{S} = \{a_1, ..., a_n ; a_i \in S \cup S^{-1}, n \in \mathbb{N} \}$
+z.z. $\bar{s} = <s>$
+\begin{enumerate}[]
+\item $S \subseteq \bar{S}$
+\item $\bar{s} \leq <s>$ denn f"ur jede UG $U$ von $G$ mit $S \leq U$ gilt:
+$a,b \in U \Rightarrow ab \in U$ und $a^{-1} \in U$
+Damit enh"alt $U$ alle endlichen Produkte von Elementen aus $S \cup S^{-1}$
+Es folgt $<s> = \bigcap{s \leq U \leq G}{U}$ enth"alt $\bar{S}$
+\item $<s> \leq \bar{s}$ Es gen"ugt daf"ur, $\bar{S}$ ist UG von $GG$ zu zeigen. 
+$a,b, \in \bar{S}$
+Schreibe $a= a_1, ..., a_n, b_1, ... , b_m$
+Es folgt $ab^{-1} = a_1* ... * a_n* b_m^{-1} ... b_1^{-1} \in \bar{S}$
+\end{enumerate}
+
+\subsection{Korollar}
+$\phi : <s> = G \to H$ sei ein Gruppenhomomorphismus. 
+Dann ist $\phi$ durch $\phi/s$ eindeutig bestimmt.
+
+\subsection{Beweis}
+$a \in G a=a_1 ... a_n $ mit $a_i \in S \cup S^{-1}$
+$\phi(a) = \phi(a_1) ... \phi(a_n) $ und falls $a_i \in S^{-1} \phi(a_i) = \phi(a_i^{-1})$
+
+
+%Vorlesung 26.11
+
+\section{Ringe:}
+
+2 Verknüpfungen, meistens $+$ und $*$, mit Distributivgesetz. Wichtigstes Beispiel:
+\begin{enumerate}[]
+\item $(\mathbb{Z},+,*)$
+\item $(K[x],+,*)$
+\item $(M_n(K),+,*)$
+\item $(\mathbb{Z}/m\mathbb{Z},+,*)$
+\end{enumerate}
+
+Dann Unterringe, Ringhomomorphismus, Ideal (spezielle Unterringe), nicht nur additiv abgeschlossen sondern auch unter Ring-Multiplikation
+
+\subsection{Lemma}
+$I \subseteq R$, dann gilt: $I$ Ideal in $R$ $\Rightleftarrow$
+$\forall x,y \in I, \forall r \in R$ gilt: $x \pm y \in I$, $rx \in I$ (Insbesondere $xy \in I$)
+
+\subsection{Bemerkung}
+Ideal steht kurz für ideale Zahl beim Übergang $k \in \mathbb{Z}$ zur Idealen Zahl $k*\mathbb{Z} \subseteq \mathbb{Z}$
+\subsection{Definition EZS}
+Sei $I \subseteq R$ Ideal. Eine Teilmenge $X$ von $I$ heisst $R$-Erzeugendensystem (oder Erzeugendensystem von $I$ als Ideal) $\Rightleftarrow$
+Jedes Element $y \in I$ ist endliche $R$-linearkombination von Elementen aus $X$ $\Rightleftarrow$ $\forall x \in I \eists x_1,...,x_k \in X \exists r_1,...,r_k \in R$
+$y = \sum_{i=1}^k r_ix_i$ (Vergleich mit Untervektorraum). %TODO sicher Untervoektorraum?
+$I$ heisst endlich erzeugt (als Ideal) $\Rightleftarrow \exists$ endliches EZS $X \subseteq I = <X>$ %TODO <X> besser machen
+
+\subsection{Beispiele}
+\begin{enumerate}[(1)]
+\item $k \mathbb{Z} = \{k*a, a\in \mathbb{Z} \} \subseteq \mathbb{Z}$ Ideal mit EZS $\{K\}$ %TODO ist das wirklich so oder hab ich ich verschrieben?
+$k = 0, k = \pm 1, \mathbb{Z} \subseteq \mathbb{Z}$
+\item $R=K[x]$ Polynomringe in einer Variblen $x$ über Krper $K$. $I=\{p \in K[x], p(0)=0\} \subseteq K[x]$ Ideal
+\item $R=K[x], I_a = \{p\in K[x], $Untergrad$(P) \geq a\} \subseteq K[x]$ Ideal ($a \in \mathbb{N}$)
+\item $K$ Körper insbesondere auch Ring. Die einzigen Ideale sind $I=0$ und $I=K$.
+\end{enumerate}
+
+\subsection{Definition Summe, Durchschnitt, Produkt, Wurzel}
+\begin{enumerate}[]
+\item Es seien $I,J \subseteq R$ Ideale. Definiere: $I+J := <J,I> = $Erzeugnisse von $I$ und $J$ = kleinstes Ideal von $R$ das $I$ und $J$ enthält
+= $\{x+y | x \in I, y \in J\}$
+\item $I \cap J = \{x \in R, x \in I$ und $x \in J$ \} Durchschnitt von $I$ und $J$.
+\item $I*J$ = $<x*y, x\in I, y \in J> = \{\sum{i=1}^k r_ix_iy_i, x_i \in I, y_i \in J, r_i \in R\}$
+Produkt von $I$ mit $J$. Insbesondere: $I*I = I^2 = <x*y | x*y\in I>$
+$I^k$ = $I*I*...*I*$ kte Potenz von $I$
+\item $\sqrt{I} :=\{x\in R, \exists k\in \mathbb{N}: x^k \in I\}$ Wurzel oder Ideal von $I$.
+\end{enumerate}
+
+\subsection{Satz}
+Diese Konstruktionen liefern Ideale von $R$. Beweis Übungsaufgae
+\subsection{Beispiele}
+%TODO Formatierung hiervon evtl schöner machen?
+$R = \mathbb{Z}, I = 6\mathbb{Z}, J = 8\mathbb{Z}, I+J = 6\mathbb{Z} + 8\mathbb{Z} = 2 \mathbb{Z}$
+$I \cap J = 6\mathbb{Z} \cap 8\mathbb{Z} = 24 \mathbb{Z}, I*J = 6\mathbb{Z}*8\mathbb{Z} = 48\mathbb{Z}$
+$\sqrt{I} = 6\mathbb{Z} = I$ $\sqrt{J} = 2\mathbb{Z}$
+
+\subsection{Satz}
+$f: R\to S$ Ringhomomorphismus $I \subseteq R, J \subseteq S $ Ideale
+\begin{enumerate}[(a)]
+\item $f(I) \subseteq S$ Unterring aber nicht notwendigerweise Ideal
+\item $f^{-1}(J) \subseteq R $ Ideal. Insbesondere $f(R) \subseteq S$ Unterring. $Kern(f) = f^{-1}(0) \subseteq R$ Ideal
+\end{enumerate}
+
+\subsection{Erinnerung:}
+$k \in \mathbb{N}$ heisst Primzahl $\Rightleftarrow k \geq 2$ hat keine echten Teiler 
+$\Rightleftarrow $teilt k ein Produkt $xy$, so teilt $k$ bereits einen der Faktoren 
+$\Rightleftarrow$ Ist $xy \in k \mathbb{Z}$, so ist entweder $x \in k \mathbb{Z} oder y \in k \mathbb{Z}$
+
+\subsection{Bemerkung}
+$k,m \in \mathbb{Z}$ Dann ist $k$ ein Teiler von $m$ $\Rightleftarrow m\mathbb{Z} \subseteq k\mathbb{Zl \Rightleftarrow m \in k\mathbb{Z}$
+Teilbarkeit entspricht des Inklusion von Idealen.
+
+\subsection{Definition (prim, maximal, radikal)}
+Es sei $I \subset R$ Ideal.
+\begin{enumerate}[]
+\item  $I$ heisst prim oder Primideal $\Rightleftarrow \forall x,y \in R mit x*y \in I$ gilt bereits $x \in I$ oder $y \in I$
+$\Rightleftarrow$ Produkt liegt in $I$ wenn mindestens einer der Faktoren bereits in $I$ liegt.
+\item $I$ heisst maximal oder maximales Ideal $\Rightleftarrow \forall J \subseteq R: I \subset J \Rightarrow J=R$
+$\Rightleftarrow I$ besitzt kein Überideal $\neq R$.
+\item $I$ heisst Radikal oder Wurzelideal $\Rightleftarrow \forall x \in R$ mit $x^m \in I$ für ein $m \in \mathbb{N}$ gibt es bereits x \in $I$
+$\Rightleftarrow I=\sqrt{I}$
+
+\subsection{Beispiel}
+\begin{enumerate}[]
+\item $R = \mathbb{Z}
+
+
+
+
+
+
+
+\end{document}
+
