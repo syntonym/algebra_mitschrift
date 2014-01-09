@@ -641,7 +641,50 @@ $K$ ist Körper, also bzgl. Inversionsbildung abgeschlossen (mit Ausnahme von 0)
 $\Rightleftarrow$ $K \subseteq L$ ist Unterkörper $\Rightleftarrow$ $L$ ist Oberkörper von $K$.
 
 \subsection{Bemerkung}
-%Kommentar
+Ist $K \subseteq L$ Körpererweiterung, so ist $L$ auch $K$-Vektorraum, 
+also ist die $K$-Dimension von $L$ definiert. 
+
+\subsection{Definition Grad der Körpererweiterung}
+
+Ist $K \subseteq L$ Körpererweiterung, so heisst $[L:K] := dim_KL$ der Grad der Körpererweiterung.
+Die Körpererweiterung heisst endlich $\Rightleftarrow [L:K] < \inf$
+
+\subsection{Beispiele}
+\begin{enumerate}[]
+\item $[\mathbb{R}:\mathbb{Q}] = \inf$ (ohne Beweis)
+\item $[\mathbb{C}:\mathbb{R}] = 2$, denn $\mathbb{C} = \mathbb{R} + \mathbb{R}i$
+\item Sei $P(x) \in K[x]$ irreduzibel von Grad $d$. 
+Setze $L = \modulus{K[x]}{<P>}$. Körper mit $K \subseteq L$(!), also Körperweiterung. 
+Aber nach euklidischer Division gilt: 
+$L = \modulus{K[x]}{<P>} \cong K \bigoplus K\bar{x} \bigoplus K\bar{x}^2 ... \bigoplus K\bar{x}^{d-1}$
+Also $[L:K] = d$
+\end{enumerate}
+
+\subsection{Satz}
+Seien $K \subseteq L \subseteq M$ zwei Körperweiterungen (eigentlich drei: $K \subseteq L, L \subseteq M, K \subseteq M$).
+Dann gilt: $[M:K] = [M:L] * [L:K]$
+
+\subsection{Beweisidee}
+
+Sei $[M:K] < \inf$. Wähle $K$-Basis $x_1, ..., x_l$ von $L$ und $L$-Basis $y_1, ... y_m$ von $M$.
+Zeige dann, dass die Produkte $x_iy_j$ für $1 \leq i \leq l$, $1 \leq j \leq m$ 
+eine $K$-Basis von $M$ bildet (EZS und K-linear unabhängig).
+
+\subsection{Definition (algebraische Elemente)}
+
+Sei $K \subseteq L $ Körpererweiterug und $\alpha \in L$ ein Element.
+$\alpha$ heisst algebraisch über $K$ (oder algebraisch abhängig über $K$)
+$\Rightleftarrow$ $\exists$ Polynom $P(x) \in K[x], P \neq 0$ mit $\alpha$ Nullstelle von P,
+also $P(\alpha) = 0$. (Einsetzen ist wohldefiniert, da $\alpha$ in Körper $L$ liegt.)
+Ist $\alpha$ nicht algebraisch über $K$, so heisst $\alpha$ tranzendent über $K$.
+Elemente $\alpha_1, ... \alpha_n \in L$ heissen algebraisch unabhängig über $K$ 
+$\Rightleftarrow$ es exestiert kein Polynom $P(x_1, ... x_n) \in K[x_1, ... x_b]$
+ungleich Null mit $P(\alpha_1, ... \alpha_n) = 0$ (vgl. $K$-linear unabhängig mit $P$ linear).
+
+\subsection{Beispiele}
+$\pi \in \mathbb{R}$ ist tranzendent über $\mathbb{Q}$.
+($\pi$ erfüllt keine polynomische Gleichung mit Koeffizienten in $\mathbb{Q}$)(Lindemann)
+$e \in \mathbb{R}$ ist tranzendent über $\mathbb{Q}$
 
 \end{document}
 
