@@ -734,6 +734,46 @@ Sei $a \in L$. Dann gilt: $K \subseteq K[a] \subseteq L$ und damit $[K(a):K] \le
 Sei $K \subseteq L$ Körpererweiterung, dann heisst $K^L$ %TODO Algebraischer Abluss machen
 $= Ab_L(K) = \{a \in L, a $algebraisch über $K \} \subseteq L$ der algebraische Abschluss von $K$ in $L$.
 
+\subsection{Bemerkung} 
+$\bar{\mathbb{Q}}^{\mathbb{C}}$ ist schwierig zu beschreiben. 
+
+\subsection{Satz}
+Ist $K \subseteq L$ Körpererweiterung, so ist $\bar{K}^{L}$ bereits ein Körper, insbesondere ein Ring.
+Wir erhalten also eine Körpereriweterung $K \subseteq \bar{K}^L \subseteq L$.
+Mit anderen Worten: Summen, Produkte und Inverse von algebraischen Elementen in $L$ sind wieder algebraisch.
+
+\subsection{Bemerkung}
+"Geeignete" Polynoome sind im allgemeinen schwer zu berechnen. 
+Der Beweis folgt aus nächstem Satz. 
+
+\subsection{Satz}
+Sei $K \subseteq L$ Körpererweiterung. Seien $a_1, ..., a_n \in L$ algebraisch über $K$. 
+Dann gilt:
+\begin{enumerate}[(a)]
+\item $K[a_1, ..., a_n] = \{P(a_1, ..., a_n); P \in K[x_1, ..., x_n]\} \subseteq L$ ist algebraisch über K.
+\item $K[a_1, ..., a_n] = K(a_1, ..., a_n) := Quod(K[a_1, ..., a_n)$
+also ist $K[a_1, ..., a_n]$ Körper.
+\end{enumerate}
+
+\subsection{Beweis}
+\begin{enumerate}[(a)]
+\item Es genügt zu zeigen, dass $dim_K [a_1, ..., a_n] < \inf$. 
+Betrachte Einsatzungshomomorphismus $\varepsilon_{a_1, ..., a_n} : K[x_1, ..., x_n] \to K[a_1, ..., a_n]$
+$x_i \mapsto a_i, P(x_1, ..., x_n) \mapsto P(a_1, ..., a_n)$ surketiv, also mit Homomorphiesatz:
+$K[a_1, ..., a_n] \cong \modulus{K[x_1, ..., a_n]}{Kern(\varepsilon_{a_1, ..., a_n})}$. 
+Sei $P_i(x_i) \in K[x_i]$ ein Polynom $\neq = 0$ mit $P_i(a_i) = 0$ von Grad $n_i \in \mathbb{N}$ %TODO überprüfen, evtl falsch
+Dann gilt: $P_i \in kern(\varepsilon_{a_1, ..., a_n})$. Damit ist $dim_K \modulus{K[x_1, ..., x_n]}{Kern(\varepsilon_{a_1, ..., a_n})}$
+$\leq dim_K \modulus{K[x_1, ..., x_n]}{<P_1(x_1), ..., P_n(x_n)> \leq m_1 * ... * m_n$
+(euklidische Division). Also ist (a) bewiesen.
+
+\item Induktion über $n$: $n = 1, a=a_1 \in L$ algebraisch über $K$. $K[a] = K(a)$
+Dann sei $P(K[x]), P \neq 0 $ mit $P(a)=0, $o.B.d.A. $P$ irreduzibel.
+Dann ist $K[a] \cong \modulus{K[x]}{<P>} = kern(\varepsilon_a)$ Körper, da $<P>$ Primideal,
+also auch maximal. Also $1/a \in K[a]$ und damit $n \geq 2$. %TODO hier fehlt was/ist was falsch
+Screibe $K[a_1, ..., a_n] = K[a_1, ..., a_{n-1}][a_n] = K(a_1, ... a_{n-a})[a_n]$ nach Induktionsanfang.
+$a_n$ algebraisch über $K(a_1, ..., a_{n-a}) =  K(a_1, ..., a_{n-1})(a_n) = K(a_1, ..., a_n)$
+
+
 
 \end{document}
 
