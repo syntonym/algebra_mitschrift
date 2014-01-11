@@ -702,7 +702,38 @@ $\sqrt[5]{7}$ erfüllt die Gleichung $x^5 -7 = 0$.
 Sei $K \subseteq L$ Körpererweiterung und $a \in L$. Dann sind folgende Aussagen äquivalent:
 \begin{enumerate}[(1)]
 \item $a$ ist algebraisch über $K$
-\item Der Einsetzungshomomorphismus $\varepsilon_a : K[x] \
+\item Der Einsetzungshomomorphismus $\varepsilon_a : K[x] \to L, x \mapsto a, P(x) \mapsto P(a)$
+(ist Ringhomomorphismus) ist nicht injektiv.
+\item Sei $K[a]$ = $\{P(a) ; P \in K[x]\}$ = Menge der $K$-Polnome in a. Dann gilt $dim_K K[a] < \inf$
+(sogar $K[a]$ Körper, also $[K[a]:K] < \inf$)
+\item $\exists m \in \mathbb{N}, m \geq 1$ mit $a^m \in K, <1,a, ... a^{m-1}> \subseteq L$.
+\end{enumerate}
+
+\subsection{Beweis}
+\begin{enumerate}[]
+\item[$(1) \Rightarrow (2)$] a algebraisch über K $\Rightleftarrow \exists P \in K[x], P \neq 0$
+mit $P(a) = 0 \Rightleftarrow \varepsilon_a$ nicht injektiv.
+\item[$(2) \Rightarrow (3)$] Es gilt: $K[a] = Im(\varepsiolon_a) \cong \modulus{K[x]}{Kern(\varepsilon_a)}$
+( als $K$-Vr mitels Homomorphiesatz). $Kern(\varepsilon_a) = <P>$ ist Hauptideal, 
+für ein Polynom $P \in K[x]$. Sei $m = deg(P)$.
+Dann gilt $dim_k \modulus{K[x]}{<P>} = d$ also $[K[a]:K] < \inf$
+\item[$(3) \Rightarrow (4)$] betrachte die Potenzen $a^0, a^1 ...$ von a als Element von $K[a]$.
+Da $[K[a]:K] < \inf$, sind $a^0, a^1, ...$ $K$-linear-Abhängig, also $\exists m \in \mathbb{N}$
+$ m \geq 1$ mit $a^0, a^1, ... , a^m$ $K$-linear-abhängig, und damit ($K$ Körper!)
+$a^m \in <a^0, ... , a^{m-1}>$
+\item[$(4) \Rightarrow (1)$] Ist $a^m = c_0 a^0 + ... + c_{m-1} a^{m-1}$ mit $c_i \in K$,
+dann setze $P(x) = x^m - c_{m-1} x^{m-1} .... - c0 \in K[x]$ mit $P(a) = 0$
+
+\subsection{Folgerung}
+$K \subseteq L$ Körpererweiterung mit $[L:K] < \inf$ dann ist $L$ über $K$ algebraisch.
+
+\subsection{Beweis}
+Sei $a \in L$. Dann gilt: $K \subseteq K[a] \subseteq L$ und damit $[K(a):K] \leq [L:K] < \inf$
+
+\subsection{Definition (algebraischer Abschluss)}
+Sei $K \subseteq L$ Körpererweiterung, dann heisst $K^L$ %TODO Algebraischer Abluss machen
+$= Ab_L(K) = \{a \in L, a $algebraisch über $K \} \subseteq L$ der algebraische Abschluss von $K$ in $L$.
+
 
 \end{document}
 
