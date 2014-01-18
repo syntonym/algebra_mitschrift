@@ -836,6 +836,55 @@ $\mathbb{R} \subseteq \mathbb{C}:$ Minimalpolynom über $\mathbb{R}: x^2 + \sqrt
 \end{enumerate}
 
 %Ende Blatt 1 14.1.14
+%Anfang Blatt 2 14.1.14
+
+\subsection{Satz}
+Sei $K$ Körper, $P\in K[x]$ Polynom, irreduzibel und normiert.
+Dann exestiert eine bis auf Isomorphie Körpererweiterung $K \subseteq L = K[a]$
+mit $a$ Nullstelle von $P$ und $P$ das Minimalpolynom von $a$.
+In Worten: Zu jedem $P \neq const$ lässt sich eine Körpererweiterung finden,
+so dass $P$ eine Nullstelle in $L$ hat.
+
+\subsection{Beweis}
+\begin{enumerate}
+\item[Existenz] Setze $L := \modulus{K[x]}{<P>}$. Dann ist $P$ irreduzibel,
+also auch $<P> \subseteq K[x]$ Primideal. 
+Daraus folgt, da $K[x]$ HIR ist, ist $<P>$ bereits maximal, und damit ist $L$ Körper.
+Wähle nun $a \in L$ durch $a = \bar{x} = $Rstklasse von x in $\modulus{K[x]}{<P>}$.
+Dann gilt: $P(a) = P(\bar{x}) = 0$ in $L$.
+$K[x] \to \modulus{K[x]}{<P>}$ ist Ringhomomorphismus. 
+
+%TODO Das hier sollte ein Einschub sein 
+Beweis
+Ist $d = deg(P)$, so ist $L \cong K \bigoplus K \bar{x} \bigoplus ... \bigoplus K \bar{x}^{d-1}$
+des $K$-Vektorraumes, wobei $1, \bar{x}, ..., \bar{x}^{d-1}$ $K$-Basis ist.
+Jedes Element von $L$ ist eindeutig durch seine Koeffizienten bzgl. der Basis bestimmt:
+$z = s_0 \bar{x}^0 + ... + s_{d-1} \bar{x}^{d-1} \cong (s_0, ... s_{d-1}) \in K^d$
+Die Multiplikation auf $L$ ist gegeben durch die Multiplikation in $K[x]$ 
+zusammen mit der euklidischen Division durch $P$.
+
+\item[Eindeutigkeit]
+Sei $K \subseteq \bar{L} = K[\bar{a}]$ weitere Körpererweiterung mit $P(\bar{a})=0$.
+Dann folgt $\bar{L} \cong \modulus{K[x]}{<P>} \cong L = K[a]$ als Körper.
+\end{enumerate}
+
+\subsection{Definition (Linearfaktoren)}[(1)]
+\item $P \in K[x]$ Polynom zerfällt über $K$ in Linearfaktoren $\Leftrightarrow$ 
+$P(x) = c \prod_{i=1}^d (x-\alpha_i)$ Linearfaktoren. 
+$\alpha_i \in K, c \in K$.
+\item Sei $(P_i)_{i\in I}$ eine Familie von Polynomen in $K[x]$, $I$ beliebige Indexmenge.
+$\mathcal{E} := \{L, L$ oberkörper von $K$, alle $P_i$ zerfallen über $L$ in Linearfaktoren $\}$
+(Klasse von Oberkörpern).
+Ein minimales Element $L$ von $\mathcal{E}$ bzgl. der Inklusion heisst 
+Zerfällungskörper der Familie $(P_i)_{i \in I}$ über $K$.
+In Worten: Ein Zerfällungskörper ist ein ''Kleinster'' Oberkörper von $K$,
+über dem alle $P_i$ in Linearfaktoren zerfallen.
+\end{enumerate}
+
+\subsection{Bemerkung}
+Ist $L$ ein ZFK der $P_i$, so hat jedes $P_i$ mindestens eine (sogar alle) Nullstellen in $L$.
+
+%Ende Blatt 2 14.1.14
 
 
 \end{document}
