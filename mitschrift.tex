@@ -1,16 +1,18 @@
 \documentclass[12pt,a4paper,ngerman]{scrreprt}
 \usepackage{ngerman,amssymb,amstext, amsmath}
 \usepackage{enumerate}
+\usepackage[utf8]{inputenc}
 
 \newcommand{\gdw}{\Leftrightarrow}
-\newcommand*\modulus[2]{{}^{#1} \! / \! _{#2}}
+\newcommand{\modulus}[2]{{}^{#1} \!/\!_{#2}}
+
 \begin{document}
 \title{Algebraische Strukturen}
 \subtitle{Mitschrift}
 \author{Simon Haendeler}
 \maketitle
 %\tableofcontents
-%TODO Sinnvolle Gliederung für den Inhalt (welche Sachen werden in das Inhaltsverzeichnis aufgenommen)
+%TODO Sinnvolle Gliederung fÃ¼r den Inhalt (welche Sachen werden in das Inhaltsverzeichnis aufgenommen)
 \setcounter{chapter}{-1}
 \chapter{Allgemeine Definitionen und Notationen}
 Wir setzen den Begriff der Menge vorraus.
@@ -124,7 +126,7 @@ Sei $m \in \mathbb{Z}$. Definiere $x \sim y :\gdw x-y \in m \mathbb{Z} \gdw m$ t
 Schreibweise $\mathbb{Z}/\sim = \mathbb{Z}/m\mathbb{Z} = \mathbb{Z}_m = \{\bar{0}, \bar{1}, ..., \bar{m-1}\}$
 
 \section{Bemerkung:}
-%TODO Besser formatieren (Absätze)
+%TODO Besser formatieren (AbsÃ¤tze)
 
 Ist $\sim$ eine "Aquivalenzrelation auf $X$, und sei $f: X \to Y$ eine Abbildung, dann existiert eine Induzierte Abbildung $\bar{f}: X/\sim \to Y$ mit kommutativem Diagramm 
 %TODO Menge aller "Aquivalenzklassen sch"oner machen
@@ -136,8 +138,8 @@ genau dann, wenn $\forall x, y \in X $ mit $x \sim y$ gilt: $f(x) = f(y)$.
 Man sagt dann: $f$ faktorisiert "uber $\sim$ oder "uber $X/\!\sim$. Falls $\bar{f}$ exestiert, ist es eindeutig und gegeben durch: $\bar{f}(\bar{x}):=f(x)$
 
 \section{Beweis}
-%TODO Der Beweis ist schlecht formatiert. Insb. Einr"uckungen, Absätze und Abstände
-%TODO Latexzeichen für := und =: einsetzen
+%TODO Der Beweis ist schlecht formatiert. Insb. Einr"uckungen, AbsÃ¤tze und AbstÃ¤nde
+%TODO Latexzeichen fÃ¼r := und =: einsetzen
 
 $\Rightarrow$
 
@@ -184,7 +186,8 @@ $(\{1\},+),(\mathbb{Z},*),(\mathbb{R},*),(\mathbb{N}+),(M_n(\mathbb{R}),*), (Enx
 
 \section{Definition Gruppe}
 
-Eine Gruppe ist eine Menge $G$ zusammen mit einer bin"aren Verkn"upfung $G\times G \to G$ : $ (x,y)\mapsto x \circ y$
+Eine Gruppe ist eine Menge $G$ zusammen mit einer bin"aren Verkn"upfung 
+$G\times G \to G$ : $ (x,y)\mapsto x \circ y$
 (meistens Addition oder Multiplikation oder Komposition), sodass folgende Axiome erf"ullt sind:
 
 \begin{enumerate}[({G}1)]
@@ -281,26 +284,26 @@ Es gilt $\forall A \in GL_n(K) : (\lambda 1_n) A = A*(\lambda 1_n) (!)$
 \item $H \subseteq GL_n(K) \cong GL(K^n)$ Dann ist $H$ normal, wenn $H$ unabhängig von der Wahl einer Basis in $K^n$ definiert werden kann.
 $H$ normal: $\forall A \ in H \forall p \in GL_n(K) PAP^{-1} \in H$
 \item $S_n = Bij(\{1, ... ,n\})$ Permutationsgruppe. Sei $\sigma, \tau \in S_n$ 
-Dann ist $\tau \sigma \tau ^{-1}$ jene Permutation, die man aus $\sigma$ erhält, wenn man die Zahlen $(1, ... ,n)$ mit $\tau$ permutiert (finde Beispiele).
-%TODO Diagramm einfügen
+Dann ist $\tau \sigma \tau ^{-1}$ jene Permutation, die man aus $\sigma$ erhÃ¤lt, wenn man die Zahlen $(1, ... ,n)$ mit $\tau$ permutiert (finde Beispiele).
+%TODO Diagramm einfÃ¼gen
 Sei $H \subseteq S_n$ die Untergruppe jener Permutationen $\sigma \in S_n$ mit $\sigma (1) = 1$ (ist Untergruppe(!)).
-Diese Untergruppe ist nicht normal, da sie von der Nummerierung der Zahlen 1...n abhängt.
+Diese Untergruppe ist nicht normal, da sie von der Nummerierung der Zahlen 1...n abhÃ¤ngt.
 \end{enumerate}
 
 \section{Bemerkung}
-Intuitiv bedeutet normale Untergruppe, dass die Definition unabhängig von der Bennenung der Elemente von $G$ definiert werden kann.
+Intuitiv bedeutet normale Untergruppe, dass die Definition unabhÃ¤ngig von der Bennenung der Elemente von $G$ definiert werden kann.
 
 \section{Definition Faktorgruppe}
 Sei $G$ Gruppe und $H \trianglelefteq G$ normale Untergruppe. 
 Es bezeichnet $G/H := \{xH, x\in G\}$ mit $xH=\{xy, y\in H\}$ die Menge der Rechtsnebenklassen von G modulo H, geschrieben $xH = \bar{x} = [x]$
 (das sind "Aquivalenzklassen von Elementen $x$ von $G$ bzgl. der "Aquivalenzrelation $x \sim z \Leftrightarrow xH=zH (!)$)
 Auf $G/H$ wird durch $(xH)(zH) = (xzH)$ oder auch geschrieben $\bar{x} *\bar{z} = \bar{xz}$, eine Gruppenstruktur definiert.
-$G/H$ mit dieser Verknüpfung heisst Faktorgruppe von $G$ nach $H$.
+$G/H$ mit dieser VerknÃ¼pfung heisst Faktorgruppe von $G$ nach $H$.
 
 \section{Bemerkung:}
 \begin{enumerate}[(a)]
-\item Diese Konstruktion funktioniert nur für normale Untergruppen.
-\item Ist $G$ kommutativ so ist $G/H$ definiert für alle Untergruppen $H$ von $G$.
+\item Diese Konstruktion funktioniert nur fÃ¼r normale Untergruppen.
+\item Ist $G$ kommutativ so ist $G/H$ definiert fÃ¼r alle Untergruppen $H$ von $G$.
 \item Ist die Gruppe $G$ additiv so schreiben wir $\bar{x} = x+H = H+x$. 
 Beispielsweise $(\mathbb{Z}, +)$ mit Restklassengruppe $\mathbb{Z}_K = \mathbb{Z} / K \mathbb{Z} = a+K\mathbb{Z} = \bar{a}$
 \end{enumerate}
@@ -315,7 +318,7 @@ Seien $x,x',z,z' \in G$ mit $xH=x'H$ und $zH=z'H$. Dann ist zu zeigen: $xzH = x'
 \end{enumerate}
 
 \section{Beispiel:}
-%TODO irgendwie unvollständig oder nicht so sehr verständlich?
+%TODO irgendwie unvollstÃ¤ndig oder nicht so sehr verstÃ¤ndlich?
 $A_n = \{$alternierende Permutationen$\} \subseteq S_n$ ist Normalteiler, dann hat $\sigma \in S_n$ $sgn=1$, so auch $\tau \sigma^{-1},$ da $sgn$ multiplikativ ist.
 Damit ist $S_n/A_n$ Faktorgruppe.  (man zeigt leicht: $S_n/A_n \cong (\{\pm 1\},*)$)
 
@@ -325,7 +328,7 @@ $G,H$ Gruppen $f: G\to H$ Abb. heisst Gruppenhomomorphismus/multiplikativ wenn
 \item $f(1_G) = 1_H$
 \item $f(xy) = f(x)f(y) \forall x,y \in G$
 \end{enumerate}
-Die Verknüpfungen können auf $G$ und $H$ ganz verschieden sein, etwa 
+Die VerknÃ¼pfungen kÃ¶nnen auf $G$ und $H$ ganz verschieden sein, etwa 
 $f:$ \mbox{$(\mathbb{R},+) \to (\mathbb{R}^*,*);$} \mbox{$x \mapsto exp(x) = e^x$} $f(x+y) = f(x) * f(y)$
 
 \section{Definition Kern und Bild}
@@ -344,10 +347,10 @@ Siehe Proseminar. Hier: $kern(f)$ ist normal.
 
 Sei also $x \in kern(f)$ und $y \in G$. Zu Zeigen: $yxy^{-1}\in kern(f)$. Aber $f(yxy^{-1}) = f(y)f(x)f(y^{-1}) = f(y) 1_H f(y^-1) = f(y)f(y^{-1}) = f(y)f(y)^{-1} = 1_H$
 
-\section{Homomorphiesatz für Gruppen}
+\section{Homomorphiesatz fÃ¼r Gruppen}
 Sei $f: G \to H$ Gruppenhomomorphismus. Dann ist die induzierte Abbildung $\bar{f}: G/kern(f) \to Im(f); \bar{x} \mapsto f(x)$
-ein wohldefinierter Gruppenisomorphismus mit zugehörigem kommutativem Diagramm:
-%TODO hier kommutatives Diagramm einfügen
+ein wohldefinierter Gruppenisomorphismus mit zugehÃ¶rigem kommutativem Diagramm:
+%TODO hier kommutatives Diagramm einfÃ¼gen
 
 \subsection{Bemerkung}
 Die kanonische Abbildung $\pi$ $G \to G/kern(f) $ ist ein surjektiver Gruppenhomomorphismus.
@@ -358,15 +361,15 @@ Die kanonische Abbildung $\pi$ $G \to G/kern(f) $ ist ein surjektiver Gruppenhom
 Setze $ K = kern(f)$ dann $ \bar(x) = \bar{z} \Leftrightarrow  xK = zK $ Insbesondere $ \exists y \in K mit x = zy$. 
 Damit ist $f(x) = f(zy) = f(z)f(y) = f(z) 1_H = f(z)$
 
-\item $\bar{f}$ ist Gruppenhomomorphismus. Selbst nachprüfen(!)
+\item $\bar{f}$ ist Gruppenhomomorphismus. Selbst nachprÃ¼fen(!)
 
 \item $\bar{f}$ surjektiv. 
-Sei $w \in Im(f)$ wähle $x \in G$ mit $f(x) = w$. 
+Sei $w \in Im(f)$ wÃ¤hle $x \in G$ mit $f(x) = w$. 
 Dann gilt $\bar{f}(\bar{x}) = f(x) = w$, also ist $f$ surjektiv.
 
 \end{enumerate}
 \section{Definition}
-%TODO <s> besser machen (< und > näher an s)
+%TODO <s> besser machen (< und > nÃ¤her an s)
 %TODO Betragsstriche besser machen
 Sei $G$ eine Gruppe, $s \in G$. 
 Dann bezeichnet $<s>$ die von $s$ erzeugte Untergruppe von G. 
@@ -403,37 +406,37 @@ wobei $G = <s>$ und $|G| = n$
 \begin{enumerate}[(1)]
 \item Sei $H$ eine Untergruppe von $\mathbb{Z}$.
 Falls $H = \{0\}$, so gilt $H = 0\mathbb{Z}$.
-Falls $H \neq \{0\}$, so enthält %hier fehlt was%
+Falls $H \neq \{0\}$, so enthÃ¤lt %hier fehlt was%
 mindestens ein $a \in H$ mit $a \neq 0$ o.B.d.A $a > 0$, den falls a $a < 0$,
 so liegt $-a \in H$ und $-a > 0$. 
-$H$ enhält ein kleinstes positives Element, welches wir mit $a$ o.B.d.A. schon gewählt haben.
+$H$ enhÃ¤lt ein kleinstes positives Element, welches wir mit $a$ o.B.d.A. schon gewÃ¤hlt haben.
 Behauptung: $H = a\mathbb{Z}$. Klarerweise gilt $a \in \mathbb{Z} \subseteq H$
-Sei $h \in H$. wir müssen zeigen $\exists q \in \mathbb{Z}: h = q*a$
+Sei $h \in H$. wir mÃ¼ssen zeigen $\exists q \in \mathbb{Z}: h = q*a$
 Wende die Division mit Rest auf $(h,a)$ an: h = q*a+r mit $q \in \mathbb{Z}, 0\leq r < a$
 Es ist $h,a \in H \to h-qa = r \in H.$
-Wegen der Minimalität von a muss $r = 0$ gelten.
+Wegen der MinimalitÃ¤t von a muss $r = 0$ gelten.
 damit $h = q*a$ und weil $h \in H$ beliebig, folgt $H \subseteq a\mathbb{Z}$
 \item Aus $(1)$ folgt das alle ELemente %Hier fehlt was.
 \item Sei $G$ eine zyklische Gruppe, $G = <s>$. 
 $f: \mathbb{Z} \to G ; k \mapsto s^k$ 
 Dies ist ein Gruppenhomomorphismus von $(\mathbb{Z},+) \to (G,*)$ und surjektiv.
-Sei $H := kern(f)$. Dann ist $H = n\mathbb{Z}$ für ein $n \in \mathbb{N} \cup \{0\}$
+Sei $H := kern(f)$. Dann ist $H = n\mathbb{Z}$ fÃ¼r ein $n \in \mathbb{N} \cup \{0\}$
 \end{enumerate}
 
 \subsection{Korollar:}
 \begin{enumerate}[1)]
 \item Jede Untergruppe einer zyklischen Gruppe ist zyklisch.
 \item Falls $G \cong \mathbb{Z}$ und $G = <s>$, 
-dann gilt $H = <s^m>$ für ein $m \in \mathbb{N} \cup \{0\}$
-\item Falls $G \cong \mathbb{Z}/n\mathbb{Z}$ für ein $n \in \mathbb{N}$ und $G = <s>$,
+dann gilt $H = <s^m>$ fÃ¼r ein $m \in \mathbb{N} \cup \{0\}$
+\item Falls $G \cong \mathbb{Z}/n\mathbb{Z}$ fÃ¼r ein $n \in \mathbb{N}$ und $G = <s>$,
 dann gilt $H = <s^m>$ mit $m|n$
 \end{enumerate}
 \subsection{Beweis}
-$G \cong \mathbb{Z}$. Dann ist $H \cong m\mathbb{Z}$ für ein $m \in \mathbb{N} \cup \{0\}$
+$G \cong \mathbb{Z}$. Dann ist $H \cong m\mathbb{Z}$ fÃ¼r ein $m \in \mathbb{N} \cup \{0\}$
 und diese ist zyklisch $(H=<mk|k\in\mathbb{Z}>)$
 $G = \mathbb{Z}/n\mathbb{Z}$. Dann ist $|G|=n$. Ist $G=<s>$, so ist $s^n = 1_G$
-Für $H \leq G$ (H Untergruppe von G), $h,k \in H$ mit $h=s^a$, $k = s^b$,
-so enthält $H$ auch $s^{ggT(a,b)}$
+FÃ¼r $H \leq G$ (H Untergruppe von G), $h,k \in H$ mit $h=s^a$, $k = s^b$,
+so enthÃ¤lt $H$ auch $s^{ggT(a,b)}$
 Sind $h_1, ..., h_n$ alle Elemente von $H$, mit $H_i = s^{ai}$, 
 so gilt $S^{ggT(a_1,...,a_r)} \in H$ und sogar $<s^{ggT(a_1,...,a_r)}> = H$. 
 Wegen $s^n = 1_G = 1_H \in H$ ist $n \in \{a_1, ... , a_r\}$ 
@@ -446,13 +449,13 @@ Sei $a \in G$ mit $ord_G(a) = n$, dann gilt $ord_G(at) = \frac{n}{ggT(n,t)}$
 \subsection{Beweis}
 Sei $d = ggT(n,t)$ und schreibe $n = dn'$ und $ggT(n',t') = 1$
 Sei $r = ord_G(t)$ %eventuell Fehler hier?
-Dann gilt: $1_G = \binom{t}{a}^r = a^{tr}$ und somit $tr = mn$ für ein $m \in \mathbb{N}$.
+Dann gilt: $1_G = \binom{t}{a}^r = a^{tr}$ und somit $tr = mn$ fÃ¼r ein $m \in \mathbb{N}$.
 Also ist $dt'r = dmn'$ und damit $t'r = mn'$. 
 Damit erhalten wir $n'/t'r$ und wegen $(n', t') = 1$ folgt $n'|r$, insbesondere $n' \leq r$
 Andererseits gilt $(a^t)^{n'} = a^{dt'n'} = {a^n}^{t'} = 1_G$ und somit $r \leq n'$
 Zusammen ergibt sich $n' - r$, d.h.: $ord_g(a^t) = n = n' = \frac{n}{d}$
 
-\section{Satz (Lagrange)}
+\subsection{Satz (Lagrange)}
 Sei $G$ eine endliche Gruppe, $H \leq G$ Untergruppe. Dann gilt $|H| | |G|$%TODO besser machen
 \subsection{Beweis}
 $G = \bigcup{x\in G}{xH}$ Falls $xH \cap yH \neq \emptyset$, 
@@ -464,8 +467,8 @@ $G = \bigcup{\bar{x} \in G}{\bar{x} H} \Rightarrow |G| = |G/H| * |H|$
 \subsection{Definition}
 Sei $G$ eine Gruppe, $S \subseteq G$ eine Teilmenge.
 Dann heisst $<s> = \bigcap{s \leq G}{H}$ die von $S$ erzeugte Untegruppe von $G$.
-(Damit die Definition gerechtfertigt ist, müssen wir nachweisen, dass der Durchschnitt beliebig vieler Untergruppen einer Gruppe wieder eine Untergruppe ist.)
-$Hi \leq G$ für $i \in I \Rightarrow \bigcap{i\in I}{Hi} \leq G$
+(Damit die Definition gerechtfertigt ist, mÃ¼ssen wir nachweisen, dass der Durchschnitt beliebig vieler Untergruppen einer Gruppe wieder eine Untergruppe ist.)
+$Hi \leq G$ fÃ¼r $i \in I \Rightarrow \bigcap{i\in I}{Hi} \leq G$
 $1_G \subseteq Hi$ 
 $\forall i \Rightarrow 1_G \in \bigcap{i\in I}{Hi}$
 Sind $x,y \in \bigcap{i\in I} Hi$, so gilt $x \in Hi, y \in Hi, \forall i\in I $
@@ -473,7 +476,7 @@ und daher auch
 $xy \in Hi, x^{-1} \in H, \forall i \in I$. 
 Dann folgt
 $xy, x^{-1} \in \bigcap{i\in I}{Hi}$
-%Folgendes ist Lückenhaft
+%Folgendes ist LÃ¼ckenhaft
 Exestiert eine Menge $S$ mit $|S| < \inf$ f"ur die $G=<s>$, so [...] endlich erzeugt.
 Achtung: $G$ endlich $\Rightarrow$ $G$ endlich erzeugt
 
@@ -507,9 +510,9 @@ $\phi(a) = \phi(a_1) ... \phi(a_n) $ und falls $a_i \in S^{-1} \phi(a_i) = \phi(
 
 %Vorlesung 26.11
 
-\section{Ringe:}
+\chapter{Ringe}
 
-2 Verknüpfungen, meistens $+$ und $*$, mit Distributivgesetz. Wichtigstes Beispiel:
+2 VerknÃ¼pfungen, meistens $+$ und $*$, mit Distributivgesetz. Wichtigstes Beispiel:
 \begin{enumerate}[]
 \item $(\mathbb{Z},+,*)$
 \item $(K[x],+,*)$
@@ -524,10 +527,11 @@ $I \subseteq R$, dann gilt: $I$ Ideal in $R$ $\Leftrightarrow$
 $\forall x,y \in I, \forall r \in R$ gilt: $x \pm y \in I$, $rx \in I$ (Insbesondere $xy \in I$)
 
 \subsection{Bemerkung}
-Ideal steht kurz für ideale Zahl beim Übergang $k \in \mathbb{Z}$ zur Idealen Zahl $k*\mathbb{Z} \subseteq \mathbb{Z}$
+Ideal steht kurz fÃ¼r ideale Zahl beim Ãbergang $k \in \mathbb{Z}$ zur Idealen Zahl $k*\mathbb{Z} \subseteq \mathbb{Z}$
 \subsection{Definition EZS}
 Sei $I \subseteq R$ Ideal. Eine Teilmenge $X$ von $I$ heisst $R$-Erzeugendensystem (oder Erzeugendensystem von $I$ als Ideal) $\Leftrightarrow$
-Jedes Element $y \in I$ ist endliche $R$-linearkombination von Elementen aus $X$ $\Leftrightarrow$ $\forall x \in I \eists x_1,...,x_k \in X \exists r_1,...,r_k \in R$
+Jedes Element $y \in I$ ist endliche $R$-linearkombination von Elementen aus $X$ 
+$\Leftrightarrow$ $\forall x \in I \exists x_1,...,x_k \in X \exists r_1,...,r_k \in R$
 $y = \sum_{i=1}^k r_ix_i$ (Vergleich mit Untervektorraum). %TODO sicher Untervoektorraum?
 $I$ heisst endlich erzeugt (als Ideal) $\Leftrightarrow \exists$ endliches EZS $X \subseteq I = <X>$ %TODO <X> besser machen
 
@@ -535,14 +539,14 @@ $I$ heisst endlich erzeugt (als Ideal) $\Leftrightarrow \exists$ endliches EZS $
 \begin{enumerate}[(1)]
 \item $k \mathbb{Z} = \{k*a, a\in \mathbb{Z} \} \subseteq \mathbb{Z}$ Ideal mit EZS $\{K\}$ %TODO ist das wirklich so oder hab ich ich verschrieben?
 $k = 0, k = \pm 1, \mathbb{Z} \subseteq \mathbb{Z}$
-\item $R=K[x]$ Polynomringe in einer Variblen $x$ über Krper $K$. $I=\{p \in K[x], p(0)=0\} \subseteq K[x]$ Ideal
+\item $R=K[x]$ Polynomringe in einer Variblen $x$ Ã¼ber Krper $K$. $I=\{p \in K[x], p(0)=0\} \subseteq K[x]$ Ideal
 \item $R=K[x], I_a = \{p\in K[x], $Untergrad$(P) \geq a\} \subseteq K[x]$ Ideal ($a \in \mathbb{N}$)
-\item $K$ Körper insbesondere auch Ring. Die einzigen Ideale sind $I=0$ und $I=K$.
+\item $K$ KÃ¶rper insbesondere auch Ring. Die einzigen Ideale sind $I=0$ und $I=K$.
 \end{enumerate}
 
 \subsection{Definition Summe, Durchschnitt, Produkt, Wurzel}
 \begin{enumerate}[]
-\item Es seien $I,J \subseteq R$ Ideale. Definiere: $I+J := <J,I> = $Erzeugnisse von $I$ und $J$ = kleinstes Ideal von $R$ das $I$ und $J$ enthält
+\item Es seien $I,J \subseteq R$ Ideale. Definiere: $I+J := <J,I> = $Erzeugnisse von $I$ und $J$ = kleinstes Ideal von $R$ das $I$ und $J$ enthÃ¤lt
 = $\{x+y | x \in I, y \in J\}$
 \item $I \cap J = \{x \in R, x \in I$ und $x \in J$ \} Durchschnitt von $I$ und $J$.
 \item $I*J$ = $<x*y, x\in I, y \in J> = \{\sum{i=1}^k r_ix_iy_i, x_i \in I, y_i \in J, r_i \in R\}$
@@ -552,9 +556,9 @@ $I^k$ = $I*I*...*I*$ kte Potenz von $I$
 \end{enumerate}
 
 \subsection{Satz}
-Diese Konstruktionen liefern Ideale von $R$. Beweis Übungsaufgae
+Diese Konstruktionen liefern Ideale von $R$. Beweis Ãbungsaufgae
 \subsection{Beispiele}
-%TODO Formatierung hiervon evtl schöner machen?
+%TODO Formatierung hiervon evtl schÃ¶ner machen?
 $R = \mathbb{Z}, I = 6\mathbb{Z}, J = 8\mathbb{Z}, I+J = 6\mathbb{Z} + 8\mathbb{Z} = 2 \mathbb{Z}$
 $I \cap J = 6\mathbb{Z} \cap 8\mathbb{Z} = 24 \mathbb{Z}, I*J = 6\mathbb{Z}*8\mathbb{Z} = 48\mathbb{Z}$
 $\sqrt{I} = 6\mathbb{Z} = I$ $\sqrt{J} = 2\mathbb{Z}$
@@ -572,7 +576,8 @@ $\Leftrightarrow $teilt k ein Produkt $xy$, so teilt $k$ bereits einen der Fakto
 $\Leftrightarrow$ Ist $xy \in k \mathbb{Z}$, so ist entweder $x \in k \mathbb{Z} oder y \in k \mathbb{Z}$
 
 \subsection{Bemerkung}
-$k,m \in \mathbb{Z}$ Dann ist $k$ ein Teiler von $m$ $\Leftrightarrow m\mathbb{Z} \subseteq k\mathbb{Zl \Leftrightarrow m \in k\mathbb{Z}$
+$k,m \in \mathbb{Z}$ Dann ist $k$ ein Teiler von $m$ 
+$\Leftrightarrow m\mathbb{Z} \subseteq k\mathbb{Z} \Leftrightarrow m \in k\mathbb{Z}$
 Teilbarkeit entspricht des Inklusion von Idealen.
 
 \subsection{Definition (prim, maximal, radikal)}
@@ -581,8 +586,10 @@ Es sei $I \subset R$ Ideal.
 \item  $I$ heisst prim oder Primideal $\Leftrightarrow \forall x,y \in R mit x*y \in I$ gilt bereits $x \in I$ oder $y \in I$
 $\Leftrightarrow$ Produkt liegt in $I$ wenn mindestens einer der Faktoren bereits in $I$ liegt.
 \item $I$ heisst maximal oder maximales Ideal $\Leftrightarrow \forall J \subseteq R: I \subset J \Rightarrow J=R$
-$\Leftrightarrow I$ besitzt kein Überideal $\neq R$.
-\item $I$ heisst Radikal oder Wurzelideal $\Leftrightarrow \forall x \in R$ mit $x^m \in I$ für ein $m \in \mathbb{N}$ gibt es bereits x \in $I$
+$\Leftrightarrow I$ besitzt kein Oberideal $\neq R$.
+\item $I$ heisst Radikal oder Wurzelideal 
+$\Leftrightarrow \forall x \in R$ mit $x^m \in I$ für ein 
+$m \in \mathbb{N}$ gibt es bereits $x \in I$
 $\Leftrightarrow I=\sqrt{I}$
 \end{enumerate}
 
@@ -595,184 +602,289 @@ $\Leftrightarrow I=\sqrt{I}$
 %Start 7.1.14
 
 
-\section{Kapitel III Körpererweiterungen}
+\chapter{Körpererweiterungen}
 \subsection{Bemerkung}
 
-Unterschied zu beliebigen Ring: In einem Körper sind alle Elemente ausser 0 multiplikativ invertierbar.
+Unterschied zu beliebigen Ring: In einem KÃ¶rper sind alle Elemente ausser 0 multiplikativ invertierbar.
 
 \subsection{Bezeichnung}
-Ist $K$ Körper, so bezeichne $K[x] = \{ P(x) = \sum{i=0}^d a_i x^i , ai \in K, d\in \mathbb{N}$
-ein Polynomring über $K$ in einer Variblen x mit x Symbol/Platzhalter.
+Ist $K$ KÃ¶rper, so bezeichne $K[x] = \{ P(x) = \sum{i=0}^d a_i x^i , ai \in K, d\in \mathbb{N}$
+ein Polynomring Ã¼ber $K$ in einer Variblen x mit x Symbol/Platzhalter.
 Analog: $K[x_1, ..., x_n] = K[x_1, ... , x_{n-1}][x_n]$ Polynomring in $n$ Variablen.
 
-\subsection{Definition (Körper)}
-$K$ kommutativer Ring $\neq 0$ heisst Körper $\Leftrightarrow$ $K^* = \modulus{K}{\{0\}$ 
+\subsection{Definition (KÃ¶rper)}
+$K$ kommutativer Ring $\neq 0$ heisst Körper $\Leftrightarrow$ $K^* = \modulus{K}{\{0\}}$ 
 $\Leftrightarrow$ alle Elemente $\neq$ 0 von K sind invertierbar
-(Schiefkörper, wenn nicht kommutativ)
+(SchiefkÃ¶rper, wenn nicht kommutativ)
 \subsection{Beispiele}
 \begin{enumerate}[]
 \item $\mathbb{Q}, \mathbb{R}, \mathbb{C}, \modulus{\mathbb{Z}}{p\mathbb{Z}} = \mathbb{F}_p$
 \item $\modulus{R}{m}, R$ Ring, $m \subseteq R$ maximales Ideal.
 \end{enumerate}
 
-Insbesondere: $K$ Körper, $K[x]$ HIR, $P \in K[x]$ irreduzibles Polynom $m = <p>$
+Insbesondere: $K$ KÃ¶rper, $K[x]$ HIR, $P \in K[x]$ irreduzibles Polynom $m = <p>$
 von P erzeugtes Ideal ist Primideal und damit auch maximal (da $K[x]$ faktoriell),
-also ist $L := \modulus{K[x]}{m}$ wieder Körper. 
-Etwa $K = \mathbb{R}$, $P(x) = x^2 + 1$ irreduzibel über $\mathbb{R}$
+also ist $L := \modulus{K[x]}{m}$ wieder KÃ¶rper. 
+Etwa $K = \mathbb{R}$, $P(x) = x^2 + 1$ irreduzibel Ã¼ber $\mathbb{R}$
 $\modulus{\mathbb{R}[x]}{<x^2 + 1>} = \mathbb{R}[\bar{x}]$
-$\bar{x}$ Restklasse von x erfüllt die Gleichung $\bar{x}^2 + 1 = 0$, also $\bar{x}^2 = -1$.
+$\bar{x}$ Restklasse von x erfÃ¼llt die Gleichung $\bar{x}^2 + 1 = 0$, also $\bar{x}^2 = -1$.
 Damit $\mathbb{R}[\bar{x}] = \mathbb{R}[i] = \mathbb{C} = \mathbb{R} \bigoplus \mathbb{R}i$
 
 \subsection{Notation}
 
-In $\subsection{Q}$ kann man nicht aus allen positiven Zahlen Wurzeln ziehen,
-zudem ist $\mathbb{Q}$ nicht vollständig, 
-daher "Erweiterung" von $\mathbb{Q}$ auf $\mathbb{R}$ vollständig.
-Um auch Wurzeln aus negativen Zahlen ziehen zu können, erweitert man nochmal von
-$\mathbb{R}$ auf $\mathbb{C}$, vollständig und algebraisch abgeschlossen 
-(Jedes (nicht konstante) Polynom in \mathbb{C}[x] hat eine Nullstelle in $\mathbb{C}$)
-Also: $\mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{C}$ Inklusionen von Körpern.
+In $\mathbb{Q}$ kann man nicht aus allen positiven Zahlen Wurzeln ziehen,
+zudem ist $\mathbb{Q}$ nicht vollstÃ¤ndig, 
+daher ''Erweiterung'' von $\mathbb{Q}$ auf $\mathbb{R}$ vollstÃ¤ndig.
+Um auch Wurzeln aus negativen Zahlen ziehen zu kÃ¶nnen, erweitert man nochmal von
+$\mathbb{R}$ auf $\mathbb{C}$, vollstÃ¤ndig und algebraisch abgeschlossen 
+(Jedes (nicht konstante) Polynom in $\mathbb{C}[x]$ hat eine Nullstelle in $\mathbb{C}$)
+Also: $\mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{C}$ Inklusionen von KÃ¶rpern.
 
-\subsection{Definition (Körpererweiterung)}
-Sei $L$ ein Körper und $K \subseteq L$ ein Unterring 
-(also mit er von $L$ induzierten Verknüpfung ist $K$ ein Ring)
-$K \subseteq L$ heisst Körpererweiterung $\Leftrightarrow$ 
-$K$ ist Körper, also bzgl. Inversionsbildung abgeschlossen (mit Ausnahme von 0)
-$\Leftrightarrow$ $K \subseteq L$ ist Unterkörper $\Leftrightarrow$ $L$ ist Oberkörper von $K$.
+\subsection{Definition (KÃ¶rpererweiterung)}
+Sei $L$ ein KÃ¶rper und $K \subseteq L$ ein Unterring 
+(also mit er von $L$ induzierten VerknÃ¼pfung ist $K$ ein Ring)
+$K \subseteq L$ heisst KÃ¶rpererweiterung $\Leftrightarrow$ 
+$K$ ist KÃ¶rper, also bzgl. Inversionsbildung abgeschlossen (mit Ausnahme von 0)
+$\Leftrightarrow$ $K \subseteq L$ ist UnterkÃ¶rper $\Leftrightarrow$ $L$ ist OberkÃ¶rper von $K$.
 
 \subsection{Bemerkung}
-Ist $K \subseteq L$ Körpererweiterung, so ist $L$ auch $K$-Vektorraum, 
+Ist $K \subseteq L$ KÃ¶rpererweiterung, so ist $L$ auch $K$-Vektorraum, 
 also ist die $K$-Dimension von $L$ definiert. 
 
-\subsection{Definition Grad der Körpererweiterung}
+\subsection{Definition Grad der KÃ¶rpererweiterung}
 
-Ist $K \subseteq L$ Körpererweiterung, so heisst $[L:K] := dim_KL$ der Grad der Körpererweiterung.
-Die Körpererweiterung heisst endlich $\Leftrightarrow [L:K] < \inf$
+Ist $K \subseteq L$ KÃ¶rpererweiterung, so heisst $[L:K] := dim_KL$ der Grad der KÃ¶rpererweiterung.
+Die KÃ¶rpererweiterung heisst endlich $\Leftrightarrow [L:K] < \inf$
 
 \subsection{Beispiele}
 \begin{enumerate}[]
 \item $[\mathbb{R}:\mathbb{Q}] = \inf$ (ohne Beweis)
 \item $[\mathbb{C}:\mathbb{R}] = 2$, denn $\mathbb{C} = \mathbb{R} + \mathbb{R}i$
 \item Sei $P(x) \in K[x]$ irreduzibel von Grad $d$. 
-Setze $L = \modulus{K[x]}{<P>}$. Körper mit $K \subseteq L$(!), also Körperweiterung. 
+Setze $L = \modulus{K[x]}{<P>}$. KÃ¶rper mit $K \subseteq L$(!), also KÃ¶rperweiterung. 
 Aber nach euklidischer Division gilt: 
 $L = \modulus{K[x]}{<P>} \cong K \bigoplus K\bar{x} \bigoplus K\bar{x}^2 ... \bigoplus K\bar{x}^{d-1}$
 Also $[L:K] = d$
 \end{enumerate}
 
 \subsection{Satz}
-Seien $K \subseteq L \subseteq M$ zwei Körperweiterungen (eigentlich drei: $K \subseteq L, L \subseteq M, K \subseteq M$).
+Seien $K \subseteq L \subseteq M$ zwei KÃ¶rperweiterungen (eigentlich drei: $K \subseteq L, L \subseteq M, K \subseteq M$).
 Dann gilt: $[M:K] = [M:L] * [L:K]$
 
 \subsection{Beweisidee}
 
-Sei $[M:K] < \inf$. Wähle $K$-Basis $x_1, ..., x_l$ von $L$ und $L$-Basis $y_1, ... y_m$ von $M$.
-Zeige dann, dass die Produkte $x_iy_j$ für $1 \leq i \leq l$, $1 \leq j \leq m$ 
-eine $K$-Basis von $M$ bildet (EZS und K-linear unabhängig).
+Sei $[M:K] < \inf$. WÃ¤hle $K$-Basis $x_1, ..., x_l$ von $L$ und $L$-Basis $y_1, ... y_m$ von $M$.
+Zeige dann, dass die Produkte $x_iy_j$ fÃ¼r $1 \leq i \leq l$, $1 \leq j \leq m$ 
+eine $K$-Basis von $M$ bildet (EZS und K-linear unabhÃ¤ngig).
 
 \subsection{Definition (algebraische Elemente)}
 
-Sei $K \subseteq L $ Körpererweiterug und $\alpha \in L$ ein Element.
-$\alpha$ heisst algebraisch über $K$ (oder algebraisch abhängig über $K$)
+Sei $K \subseteq L $ KÃ¶rpererweiterug und $\alpha \in L$ ein Element.
+$\alpha$ heisst algebraisch Ã¼ber $K$ (oder algebraisch abhÃ¤ngig Ã¼ber $K$)
 $\Leftrightarrow$ $\exists$ Polynom $P(x) \in K[x], P \neq 0$ mit $\alpha$ Nullstelle von P,
-also $P(\alpha) = 0$. (Einsetzen ist wohldefiniert, da $\alpha$ in Körper $L$ liegt.)
-Ist $\alpha$ nicht algebraisch über $K$, so heisst $\alpha$ tranzendent über $K$.
-Elemente $\alpha_1, ... \alpha_n \in L$ heissen algebraisch unabhängig über $K$ 
+also $P(\alpha) = 0$. (Einsetzen ist wohldefiniert, da $\alpha$ in KÃ¶rper $L$ liegt.)
+Ist $\alpha$ nicht algebraisch Ã¼ber $K$, so heisst $\alpha$ tranzendent Ã¼ber $K$.
+Elemente $\alpha_1, ... \alpha_n \in L$ heissen algebraisch unabhÃ¤ngig Ã¼ber $K$ 
 $\Leftrightarrow$ es exestiert kein Polynom $P(x_1, ... x_n) \in K[x_1, ... x_b]$
-ungleich Null mit $P(\alpha_1, ... \alpha_n) = 0$ (vgl. $K$-linear unabhängig mit $P$ linear).
+ungleich Null mit $P(\alpha_1, ... \alpha_n) = 0$ (vgl. $K$-linear unabhÃ¤ngig mit $P$ linear).
 
 \subsection{Beispiele}
-$\pi \in \mathbb{R}$ ist tranzendent über $\mathbb{Q}$.
-($\pi$ erfüllt keine polynomische Gleichung mit Koeffizienten in $\mathbb{Q}$)(Lindemann)
-$e \in \mathbb{R}$ ist tranzendent über $\mathbb{Q}$
+$\pi \in \mathbb{R}$ ist tranzendent Ã¼ber $\mathbb{Q}$.
+($\pi$ erfÃ¼llt keine polynomische Gleichung mit Koeffizienten in $\mathbb{Q}$)(Lindemann)
+$e \in \mathbb{R}$ ist tranzendent Ã¼ber $\mathbb{Q}$
 
-\subsection{Definition Algebraische K�rpererweiterung}
-Eine K�rpererweiterung $K \subseteq L$ heisst algebraisch (oder endlich)
-$\Leftrightarrow$ alle $\alpha \in L$ sind algebraisch �ber $K$.
+\subsection{Definition Algebraische Körpererweiterung}
+Eine Körpererweiterung $K \subseteq L$ heisst algebraisch (oder endlich)
+$\Leftrightarrow$ alle $\alpha \in L$ sind algebraisch über $K$.
 
 \subsection{Beispiele}
 \begin{enumerate}[(1)]
-\item $\mathbb{Q} \subseteq \mathbb{C}$ die �ber $\mathbb{Q}$ algebraischen komplexen Elemente heissen algebraische Zahlen,
-etwa $\sqrt{2}, i, i+1, i+\sqrt{2}, \sqrt[3]{2} + \sqrt[5]{7}, ...$ $\sqrt[3]{2}$ erf�llt die Gleichung $x^3 -2 = 0$ �ber $\mathbb{Q}$
-$\sqrt[5]{7}$ erf�llt die Gleichung $x^5 -7 = 0$.
-\item $\mathbb{R} \subseteq \mathbb{C}$ ist algebraisch, da jede komplexe Zahl $a+bi$ algebraisch �ber $\mathbb{R}$ ist. (unbestimmter Ansatz)
+\item $\mathbb{Q} \subseteq \mathbb{C}$ die über $\mathbb{Q}$ algebraischen komplexen Elemente heissen algebraische Zahlen,
+etwa $\sqrt{2}, i, i+1, i+\sqrt{2}, \sqrt[3]{2} + \sqrt[5]{7}, ...$ $\sqrt[3]{2}$ erfüllt die Gleichung $x^3 -2 = 0$ über $\mathbb{Q}$
+$\sqrt[5]{7}$ erfüllt die Gleichung $x^5 -7 = 0$.
+\item $\mathbb{R} \subseteq \mathbb{C}$ ist algebraisch, da jede komplexe Zahl $a+bi$ algebraisch über $\mathbb{R}$ ist. (unbestimmter Ansatz)
 \end{enumerate}
 
 \subsection{Satz (Charakterisierun von algebraishcen Elementen)}
-Sei $K \subseteq L$ K�rpererweiterung und $a \in L$. Dann sind folgende Aussagen �quivalent:
+Sei $K \subseteq L$ Körpererweiterung und $a \in L$. Dann sind folgende Aussagen äquivalent:
 \begin{enumerate}[(1)]
-\item $a$ ist algebraisch �ber $K$
+\item $a$ ist algebraisch über $K$
 \item Der Einsetzungshomomorphismus $\varepsilon_a : K[x] \to L, x \mapsto a, P(x) \mapsto P(a)$
 (ist Ringhomomorphismus) ist nicht injektiv.
 \item Sei $K[a]$ = $\{P(a) ; P \in K[x]\}$ = Menge der $K$-Polnome in a. Dann gilt $dim_K K[a] < \inf$
-(sogar $K[a]$ K�rper, also $[K[a]:K] < \inf$)
+(sogar $K[a]$ Körper, also $[K[a]:K] < \inf$)
 \item $\exists m \in \mathbb{N}, m \geq 1$ mit $a^m \in K, <1,a, ... a^{m-1}> \subseteq L$.
 \end{enumerate}
 
 \subsection{Beweis}
 \begin{enumerate}[]
-\item[$(1) \Rightarrow (2)$] a algebraisch �ber K $\Leftrightarrow \exists P \in K[x], P \neq 0$
+\item[$(1) \Rightarrow (2)$] a algebraisch über K $\Leftrightarrow \exists P \in K[x], P \neq 0$
 mit $P(a) = 0 \Leftrightarrow \varepsilon_a$ nicht injektiv.
-\item[$(2) \Rightarrow (3)$] Es gilt: $K[a] = Im(\varepsiolon_a) \cong \modulus{K[x]}{Kern(\varepsilon_a)}$
+\item[$(2) \Rightarrow (3)$] Es gilt: $K[a] = Im(\varepsilon_a)$
+$\cong \modulus{K[x]}{Kern(\varepsilon_a)}$
 ( als $K$-Vr mitels Homomorphiesatz). $Kern(\varepsilon_a) = <P>$ ist Hauptideal, 
-f�r ein Polynom $P \in K[x]$. Sei $m = deg(P)$.
+für ein Polynom $P \in K[x]$. Sei $m = deg(P)$.
 Dann gilt $dim_k \modulus{K[x]}{<P>} = d$ also $[K[a]:K] < \inf$
 \item[$(3) \Rightarrow (4)$] betrachte die Potenzen $a^0, a^1 ...$ von a als Element von $K[a]$.
-Da $[K[a]:K] < \inf$, sind $a^0, a^1, ...$ $K$-linear-Abh�ngig, also $\exists m \in \mathbb{N}$
-$ m \geq 1$ mit $a^0, a^1, ... , a^m$ $K$-linear-abh�ngig, und damit ($K$ K�rper!)
+Da $[K[a]:K] < \inf$, sind $a^0, a^1, ...$ $K$-linear-Abhängig, also $\exists m \in \mathbb{N}$
+$ m \geq 1$ mit $a^0, a^1, ... , a^m$ $K$-linear-abhängig, und damit ($K$ Körper!)
 $a^m \in <a^0, ... , a^{m-1}>$
 \item[$(4) \Rightarrow (1)$] Ist $a^m = c_0 a^0 + ... + c_{m-1} a^{m-1}$ mit $c_i \in K$,
 dann setze $P(x) = x^m - c_{m-1} x^{m-1} .... - c0 \in K[x]$ mit $P(a) = 0$
+\end{enumerate}
 
 \subsection{Folgerung}
-$K \subseteq L$ K�rpererweiterung mit $[L:K] < \inf$ dann ist $L$ �ber $K$ algebraisch.
+$K \subseteq L$ Körpererweiterung mit $[L:K] < \inf$ dann ist $L$ über $K$ algebraisch.
 
 \subsection{Beweis}
 Sei $a \in L$. Dann gilt: $K \subseteq K[a] \subseteq L$ und damit $[K(a):K] \leq [L:K] < \inf$
 
 \subsection{Definition (algebraischer Abschluss)}
-Sei $K \subseteq L$ K�rpererweiterung, dann heisst $K^L$ %TODO Algebraischer Abluss machen
-$= Ab_L(K) = \{a \in L, a $algebraisch �ber $K \} \subseteq L$ der algebraische Abschluss von $K$ in $L$.
+Sei $K \subseteq L$ Körpererweiterung, dann heisst $K^L$ %TODO Algebraischer Abluss machen
+$= Ab_L(K) = \{a \in L, a $algebraisch über $K \} \subseteq L$ der algebraische Abschluss von $K$ in $L$.
 
 \subsection{Bemerkung} 
 $\bar{\mathbb{Q}}^{\mathbb{C}}$ ist schwierig zu beschreiben. 
 
 \subsection{Satz}
-Ist $K \subseteq L$ K�rpererweiterung, so ist $\bar{K}^{L}$ bereits ein K�rper, insbesondere ein Ring.
-Wir erhalten also eine K�rpereriweterung $K \subseteq \bar{K}^L \subseteq L$.
+Ist $K \subseteq L$ Körpererweiterung, so ist $\bar{K}^{L}$ bereits ein Körper, insbesondere ein Ring.
+Wir erhalten also eine Körpereriweterung $K \subseteq \bar{K}^L \subseteq L$.
 Mit anderen Worten: Summen, Produkte und Inverse von algebraischen Elementen in $L$ sind wieder algebraisch.
 
 \subsection{Bemerkung}
-"Geeignete" Polynoome sind im allgemeinen schwer zu berechnen. 
-Der Beweis folgt aus n�chstem Satz. 
+''Geeignete'' Polynoome sind im allgemeinen schwer zu berechnen. 
+Der Beweis folgt aus nächstem Satz. 
 
 \subsection{Satz}
-Sei $K \subseteq L$ K�rpererweiterung. Seien $a_1, ..., a_n \in L$ algebraisch �ber $K$. 
+Sei $K \subseteq L$ Körpererweiterung. Seien $a_1, ..., a_n \in L$ algebraisch über $K$. 
 Dann gilt:
 \begin{enumerate}[(a)]
-\item $K[a_1, ..., a_n] = \{P(a_1, ..., a_n); P \in K[x_1, ..., x_n]\} \subseteq L$ ist algebraisch �ber K.
+\item $K[a_1, ..., a_n] = \{P(a_1, ..., a_n); P \in K[x_1, ..., x_n]\} \subseteq L$ ist algebraisch über K.
 \item $K[a_1, ..., a_n] = K(a_1, ..., a_n) := Quod(K[a_1, ..., a_n)$
-also ist $K[a_1, ..., a_n]$ K�rper.
+also ist $K[a_1, ..., a_n]$ Körper.
 \end{enumerate}
 
 \subsection{Beweis}
 \begin{enumerate}[(a)]
-\item Es gen�gt zu zeigen, dass $dim_K [a_1, ..., a_n] < \inf$. 
+\item Es genügt zu zeigen, dass $dim_K [a_1, ..., a_n] < \inf$. 
 Betrachte Einsatzungshomomorphismus $\varepsilon_{a_1, ..., a_n} : K[x_1, ..., x_n] \to K[a_1, ..., a_n]$
 $x_i \mapsto a_i, P(x_1, ..., x_n) \mapsto P(a_1, ..., a_n)$ surketiv, also mit Homomorphiesatz:
 $K[a_1, ..., a_n] \cong \modulus{K[x_1, ..., a_n]}{Kern(\varepsilon_{a_1, ..., a_n})}$. 
-Sei $P_i(x_i) \in K[x_i]$ ein Polynom $\neq = 0$ mit $P_i(a_i) = 0$ von Grad $n_i \in \mathbb{N}$ %TODO �berpr�fen, evtl falsch
+Sei $P_i(x_i) \in K[x_i]$ ein Polynom $\neq = 0$ mit $P_i(a_i) = 0$ von Grad $n_i \in \mathbb{N}$ %TODO überprüfen, evtl falsch
 Dann gilt: $P_i \in kern(\varepsilon_{a_1, ..., a_n})$. Damit ist $dim_K \modulus{K[x_1, ..., x_n]}{Kern(\varepsilon_{a_1, ..., a_n})}$
-$\leq dim_K \modulus{K[x_1, ..., x_n]}{<P_1(x_1), ..., P_n(x_n)> \leq m_1 * ... * m_n$
+$\leq dim_K \modulus{K[x_1, ..., x_n]}{<P_1(x_1), ..., P_n(x_n)> \leq m_1 * ... * m_n}$
 (euklidische Division). Also ist (a) bewiesen.
 
-\item Induktion �ber $n$: $n = 1, a=a_1 \in L$ algebraisch �ber $K$. $K[a] = K(a)$
+\item Induktion über $n$: $n = 1, a=a_1 \in L$ algebraisch über $K$. $K[a] = K(a)$
 Dann sei $P(K[x]), P \neq 0 $ mit $P(a)=0, $o.B.d.A. $P$ irreduzibel.
-Dann ist $K[a] \cong \modulus{K[x]}{<P>} = kern(\varepsilon_a)$ K�rper, da $<P>$ Primideal,
+Dann ist $K[a] \cong \modulus{K[x]}{<P>} = kern(\varepsilon_a)$ Körper, da $<P>$ Primideal,
 also auch maximal. Also $1/a \in K[a]$ und damit $n \geq 2$. %TODO hier fehlt was/ist was falsch
 Screibe $K[a_1, ..., a_n] = K[a_1, ..., a_{n-1}][a_n] = K(a_1, ... a_{n-a})[a_n]$ nach Induktionsanfang.
-$a_n$ algebraisch �ber $K(a_1, ..., a_{n-a}) =  K(a_1, ..., a_{n-1})(a_n) = K(a_1, ..., a_n)$
+$a_n$ algebraisch über $K(a_1, ..., a_{n-a}) =  K(a_1, ..., a_{n-1})(a_n) = K(a_1, ..., a_n)$
 
+\end{enumerate}
+
+%Start 14.1.14
+%Blatt 1
+
+\subsection{Bemerkung}
+$p \in K[x], K \subseteq L$ Körpererweiterung. 
+Dann kann, muss aber nicht, $P$ eine Nullstelle in $L$ haben. 
+Ziel: Konstruiere zu $P \in K[x]$ eine Körpererweiterung $K \subseteq L$, 
+so dass $P$ in $L$ mindestens eine Nullstelle hat.
+
+\subsection{Beispiele}
+$\mathbb{R} \subseteq \mathbb{C}$, dann hat jedes $P \in \mathbb{R}[x], P \neq const$
+eine Nullstelle in $\mathbb{C}$.
+
+\subsection{Definition (Minimalpolynom)}
+Sei $K \subseteq L$ Körpererweiterung. $a \in L$ algebraisch über K.
+Ein $P \in K[x], P \neq 0$ heisst Minimalpolynom von $a$ über $K \Leftrightarrow$
+$P(a) = 0$, $P$ irreduzibel, normiert und von minimalem Grad.
+
+\subsection{Satz}
+Sei $K \subseteq L$ Körpererweiterung, $a \in L$ algebraisch über $K$.
+Dann bestizt $a$ genau ein Minimalpolynom $P(x) \in Kx]$ und $deg(P) = [K[a]:K]$
+$= [K(a):K] = dim_K K(a)$
+
+\subsection{Beweis}
+$a \in L$ algebraisch über $K$ $\Rightarrow I = \{ \mathbb{Q} \in K[x], \mathbb{Q}(a) = 0\}$
+$\subseteq K[x]$ Ideal und $I \neq 0$.
+Aber $K[x]$ ist HIR, also $\exists P \in Kx]$ mit $I = <P> = K[x]P$.
+Dann ist $P$ irreduzibel (ansonsten wäre ein Faktor von $P$ in $I$) und o.B.d.A. normiert.
+Zudem hat $P$ minimalen Grad in $I$. 
+Eindeutigkeit: Wäre $I = <P> = <\bar{P}>$ mit $P,\bar{P}$ normiert und $P(a)=\bar{P}(a)=0$
+sowie $deg(P) = deg(\bar{P})$ (da Grad minimal).
+Dann gilt: $(P-\bar{P}) = 0$, aber $deg(P-\bar{P}) < deg(P) = deg(\bar{P})$
+$\Rightarrow P = \bar{P}$. Noch z.Z: $deg(P) = [K[a]:K]$. 
+Aber wir betrachten $\varepsilon_a: K[x] \to K[a] = K(a) \subseteq L$
+$x \mapsto a$, $Q(x) \mapsto Q(a)$.
+$\varepsilon_a$ ist surjektiv nach Definition von $K[a]$. Mit Homomorphiesatz folgt:
+$\modulus{K[x]}{<P>} \to K[a]$ ist Körper isomorph, 
+wobei $d = deg(P) = dim_K(\modulus{K[x]}{<P>} = dim_K K[a] = [K[a]:K]$
+
+\subsection{Beispiel}
+\begin{enumerate}[(1)]
+\item $\mathbb{R} \subseteq \mathbb{C}, a = i mit$ Minimalpolynom $P(x) = x^2 +1$
+\item $\mathbb{Q} \subseteq \mathbb{Q}[\sqrt[3]{5}] a = \sqrt[3]{5}$
+mit Minimalpolynom $P(x) = x^3 - 5$
+(Bemerkung: Koeffizienten des Minimalpolynoms liegen im kleineren Körper K)
+\item $\mathbb{C} \subseteq \mathbb{C}, a=i$ mit Minimalpolynom $P(x) = x-i$
+\item $\mathbb{Q} \subseteq \mathbb{C}, a = \sqrt[3]{2}i$, 
+Minimalpolynom über $\mathbb{Q}: x^6 + 4$;
+$\mathbb{R} \subseteq \mathbb{C}:$ Minimalpolynom über $\mathbb{R}: x^2 + \sqrt[3]{4}$
+\end{enumerate}
+
+%Ende Blatt 1 14.1.14
+%Anfang Blatt 2 14.1.14
+
+\subsection{Satz}
+Sei $K$ Körper, $P\in K[x]$ Polynom, irreduzibel und normiert.
+Dann exestiert eine bis auf Isomorphie Körpererweiterung $K \subseteq L = K[a]$
+mit $a$ Nullstelle von $P$ und $P$ das Minimalpolynom von $a$.
+In Worten: Zu jedem $P \neq const$ lässt sich eine Körpererweiterung finden,
+so dass $P$ eine Nullstelle in $L$ hat.
+
+\subsection{Beweis}
+\begin{enumerate}
+\item[Existenz] Setze $L := \modulus{K[x]}{<P>}$. Dann ist $P$ irreduzibel,
+also auch $<P> \subseteq K[x]$ Primideal. 
+Daraus folgt, da $K[x]$ HIR ist, ist $<P>$ bereits maximal, und damit ist $L$ Körper.
+Wähle nun $a \in L$ durch $a = \bar{x} = $Rstklasse von x in $\modulus{K[x]}{<P>}$.
+Dann gilt: $P(a) = P(\bar{x}) = 0$ in $L$.
+$K[x] \to \modulus{K[x]}{<P>}$ ist Ringhomomorphismus. 
+
+%TODO Das hier sollte ein Einschub sein 
+Beweis
+Ist $d = deg(P)$, so ist $L \cong K \bigoplus K \bar{x} \bigoplus ... \bigoplus K \bar{x}^{d-1}$
+des $K$-Vektorraumes, wobei $1, \bar{x}, ..., \bar{x}^{d-1}$ $K$-Basis ist.
+Jedes Element von $L$ ist eindeutig durch seine Koeffizienten bzgl. der Basis bestimmt:
+$z = s_0 \bar{x}^0 + ... + s_{d-1} \bar{x}^{d-1} \cong (s_0, ... s_{d-1}) \in K^d$
+Die Multiplikation auf $L$ ist gegeben durch die Multiplikation in $K[x]$ 
+zusammen mit der euklidischen Division durch $P$.
+
+\item[Eindeutigkeit]
+Sei $K \subseteq \bar{L} = K[\bar{a}]$ weitere Körpererweiterung mit $P(\bar{a})=0$.
+Dann folgt $\bar{L} \cong \modulus{K[x]}{<P>} \cong L = K[a]$ als Körper.
+\end{enumerate}
+
+\subsection{Definition (Linearfaktoren)}[(1)]
+\item $P \in K[x]$ Polynom zerfällt über $K$ in Linearfaktoren $\Leftrightarrow$ 
+$P(x) = c \prod_{i=1}^d (x-\alpha_i)$ Linearfaktoren. 
+$\alpha_i \in K, c \in K$.
+\item Sei $(P_i)_{i\in I}$ eine Familie von Polynomen in $K[x]$, $I$ beliebige Indexmenge.
+$\mathcal{E} := \{L, L$ oberkörper von $K$, alle $P_i$ zerfallen über $L$ in Linearfaktoren $\}$
+(Klasse von Oberkörpern).
+Ein minimales Element $L$ von $\mathcal{E}$ bzgl. der Inklusion heisst 
+Zerfällungskörper der Familie $(P_i)_{i \in I}$ über $K$.
+In Worten: Ein Zerfällungskörper ist ein ''Kleinster'' Oberkörper von $K$,
+über dem alle $P_i$ in Linearfaktoren zerfallen.
+\end{enumerate}
+
+\subsection{Bemerkung}
+Ist $L$ ein ZFK der $P_i$, so hat jedes $P_i$ mindestens eine (sogar alle) Nullstellen in $L$.
+
+%Ende Blatt 2 14.1.14
 
 
 \end{document}
