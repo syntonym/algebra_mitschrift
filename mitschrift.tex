@@ -911,6 +911,19 @@ Dann gilt:
 $P := \prod_{i\in I}{P_i}$.
 \end{enumerate}
 
+\subsection{Beweis}
+\begin{enumerate}[(1)]
+\item $K'$ enthällt alle Nullstellen aller $P_i$, also zerfallen alle $P_i$ über $K'$ in Linearfaktoren.
+\item Es ist noch zu zeigen, dass $K'$ minimal bzgl. Inklusion ist. 
+Aber Linearfaktoren sind von der Gestalt $(x-a)$ mit $a \in N$.
+Damit ist $K'$ minimal und damit eindeutig.
+\item Alle $z \in N$ sind algebraisch über $K$ (als Nullstelle von einem $P_i \in K[x]$)
+\item Ist $I$ endlich, so ist $N$ endlich, $N = \{ z_1, ..., z_m\}$.
+Damit ist $K' = K(z_1, ..., z_m)$ endlichdimensionaler $K$-Vektorraum.
+Zudem ist $V_L(P) = V_L(\prod_{i \in I}{P_i}) = \bigcup_{i \in I} V_L(P_i) = N$.
+\end{enumerate}
+
+
 
 \end{document}
 
