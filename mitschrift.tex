@@ -3,7 +3,7 @@
 \usepackage{enumerate}
 
 \newcommand{\gdw}{\Leftrightarrow}
-
+\newcommand*\modulus[2]{{}^{#1} \! / \! _{#2}}
 \begin{document}
 \title{Algebraische Strukturen}
 \subtitle{Mitschrift}
@@ -520,16 +520,16 @@ $\phi(a) = \phi(a_1) ... \phi(a_n) $ und falls $a_i \in S^{-1} \phi(a_i) = \phi(
 Dann Unterringe, Ringhomomorphismus, Ideal (spezielle Unterringe), nicht nur additiv abgeschlossen sondern auch unter Ring-Multiplikation
 
 \subsection{Lemma}
-$I \subseteq R$, dann gilt: $I$ Ideal in $R$ $\Rightleftarrow$
+$I \subseteq R$, dann gilt: $I$ Ideal in $R$ $\Leftrightarrow$
 $\forall x,y \in I, \forall r \in R$ gilt: $x \pm y \in I$, $rx \in I$ (Insbesondere $xy \in I$)
 
 \subsection{Bemerkung}
 Ideal steht kurz für ideale Zahl beim Übergang $k \in \mathbb{Z}$ zur Idealen Zahl $k*\mathbb{Z} \subseteq \mathbb{Z}$
 \subsection{Definition EZS}
-Sei $I \subseteq R$ Ideal. Eine Teilmenge $X$ von $I$ heisst $R$-Erzeugendensystem (oder Erzeugendensystem von $I$ als Ideal) $\Rightleftarrow$
-Jedes Element $y \in I$ ist endliche $R$-linearkombination von Elementen aus $X$ $\Rightleftarrow$ $\forall x \in I \eists x_1,...,x_k \in X \exists r_1,...,r_k \in R$
+Sei $I \subseteq R$ Ideal. Eine Teilmenge $X$ von $I$ heisst $R$-Erzeugendensystem (oder Erzeugendensystem von $I$ als Ideal) $\Leftrightarrow$
+Jedes Element $y \in I$ ist endliche $R$-linearkombination von Elementen aus $X$ $\Leftrightarrow$ $\forall x \in I \eists x_1,...,x_k \in X \exists r_1,...,r_k \in R$
 $y = \sum_{i=1}^k r_ix_i$ (Vergleich mit Untervektorraum). %TODO sicher Untervoektorraum?
-$I$ heisst endlich erzeugt (als Ideal) $\Rightleftarrow \exists$ endliches EZS $X \subseteq I = <X>$ %TODO <X> besser machen
+$I$ heisst endlich erzeugt (als Ideal) $\Leftrightarrow \exists$ endliches EZS $X \subseteq I = <X>$ %TODO <X> besser machen
 
 \subsection{Beispiele}
 \begin{enumerate}[(1)]
@@ -567,23 +567,23 @@ $f: R\to S$ Ringhomomorphismus $I \subseteq R, J \subseteq S $ Ideale
 \end{enumerate}
 
 \subsection{Erinnerung:}
-$k \in \mathbb{N}$ heisst Primzahl $\Rightleftarrow k \geq 2$ hat keine echten Teiler 
-$\Rightleftarrow $teilt k ein Produkt $xy$, so teilt $k$ bereits einen der Faktoren 
-$\Rightleftarrow$ Ist $xy \in k \mathbb{Z}$, so ist entweder $x \in k \mathbb{Z} oder y \in k \mathbb{Z}$
+$k \in \mathbb{N}$ heisst Primzahl $\Leftrightarrow k \geq 2$ hat keine echten Teiler 
+$\Leftrightarrow $teilt k ein Produkt $xy$, so teilt $k$ bereits einen der Faktoren 
+$\Leftrightarrow$ Ist $xy \in k \mathbb{Z}$, so ist entweder $x \in k \mathbb{Z} oder y \in k \mathbb{Z}$
 
 \subsection{Bemerkung}
-$k,m \in \mathbb{Z}$ Dann ist $k$ ein Teiler von $m$ $\Rightleftarrow m\mathbb{Z} \subseteq k\mathbb{Zl \Rightleftarrow m \in k\mathbb{Z}$
+$k,m \in \mathbb{Z}$ Dann ist $k$ ein Teiler von $m$ $\Leftrightarrow m\mathbb{Z} \subseteq k\mathbb{Zl \Leftrightarrow m \in k\mathbb{Z}$
 Teilbarkeit entspricht des Inklusion von Idealen.
 
 \subsection{Definition (prim, maximal, radikal)}
 Es sei $I \subset R$ Ideal.
 \begin{enumerate}[]
-\item  $I$ heisst prim oder Primideal $\Rightleftarrow \forall x,y \in R mit x*y \in I$ gilt bereits $x \in I$ oder $y \in I$
-$\Rightleftarrow$ Produkt liegt in $I$ wenn mindestens einer der Faktoren bereits in $I$ liegt.
-\item $I$ heisst maximal oder maximales Ideal $\Rightleftarrow \forall J \subseteq R: I \subset J \Rightarrow J=R$
-$\Rightleftarrow I$ besitzt kein Überideal $\neq R$.
-\item $I$ heisst Radikal oder Wurzelideal $\Rightleftarrow \forall x \in R$ mit $x^m \in I$ für ein $m \in \mathbb{N}$ gibt es bereits x \in $I$
-$\Rightleftarrow I=\sqrt{I}$
+\item  $I$ heisst prim oder Primideal $\Leftrightarrow \forall x,y \in R mit x*y \in I$ gilt bereits $x \in I$ oder $y \in I$
+$\Leftrightarrow$ Produkt liegt in $I$ wenn mindestens einer der Faktoren bereits in $I$ liegt.
+\item $I$ heisst maximal oder maximales Ideal $\Leftrightarrow \forall J \subseteq R: I \subset J \Rightarrow J=R$
+$\Leftrightarrow I$ besitzt kein Überideal $\neq R$.
+\item $I$ heisst Radikal oder Wurzelideal $\Leftrightarrow \forall x \in R$ mit $x^m \in I$ für ein $m \in \mathbb{N}$ gibt es bereits x \in $I$
+$\Leftrightarrow I=\sqrt{I}$
 \end{enumerate}
 
 \subsection{Beispiel}
@@ -606,8 +606,8 @@ ein Polynomring über $K$ in einer Variblen x mit x Symbol/Platzhalter.
 Analog: $K[x_1, ..., x_n] = K[x_1, ... , x_{n-1}][x_n]$ Polynomring in $n$ Variablen.
 
 \subsection{Definition (Körper)}
-$K$ kommutativer Ring $\neq 0$ heisst Körper $\Rightleftarrow$ $K^* = \modulus{K}{\{0\}$ 
-$\Rightleftarrow$ alle Elemente $\neq$ 0 von K sind invertierbar
+$K$ kommutativer Ring $\neq 0$ heisst Körper $\Leftrightarrow$ $K^* = \modulus{K}{\{0\}$ 
+$\Leftrightarrow$ alle Elemente $\neq$ 0 von K sind invertierbar
 (Schiefkörper, wenn nicht kommutativ)
 \subsection{Beispiele}
 \begin{enumerate}[]
@@ -636,9 +636,9 @@ Also: $\mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{C}$ Inklusionen von Kö
 \subsection{Definition (Körpererweiterung)}
 Sei $L$ ein Körper und $K \subseteq L$ ein Unterring 
 (also mit er von $L$ induzierten Verknüpfung ist $K$ ein Ring)
-$K \subseteq L$ heisst Körpererweiterung $\Rightleftarrow$ 
+$K \subseteq L$ heisst Körpererweiterung $\Leftrightarrow$ 
 $K$ ist Körper, also bzgl. Inversionsbildung abgeschlossen (mit Ausnahme von 0)
-$\Rightleftarrow$ $K \subseteq L$ ist Unterkörper $\Rightleftarrow$ $L$ ist Oberkörper von $K$.
+$\Leftrightarrow$ $K \subseteq L$ ist Unterkörper $\Leftrightarrow$ $L$ ist Oberkörper von $K$.
 
 \subsection{Bemerkung}
 Ist $K \subseteq L$ Körpererweiterung, so ist $L$ auch $K$-Vektorraum, 
@@ -647,7 +647,7 @@ also ist die $K$-Dimension von $L$ definiert.
 \subsection{Definition Grad der Körpererweiterung}
 
 Ist $K \subseteq L$ Körpererweiterung, so heisst $[L:K] := dim_KL$ der Grad der Körpererweiterung.
-Die Körpererweiterung heisst endlich $\Rightleftarrow [L:K] < \inf$
+Die Körpererweiterung heisst endlich $\Leftrightarrow [L:K] < \inf$
 
 \subsection{Beispiele}
 \begin{enumerate}[]
@@ -674,11 +674,11 @@ eine $K$-Basis von $M$ bildet (EZS und K-linear unabhängig).
 
 Sei $K \subseteq L $ Körpererweiterug und $\alpha \in L$ ein Element.
 $\alpha$ heisst algebraisch über $K$ (oder algebraisch abhängig über $K$)
-$\Rightleftarrow$ $\exists$ Polynom $P(x) \in K[x], P \neq 0$ mit $\alpha$ Nullstelle von P,
+$\Leftrightarrow$ $\exists$ Polynom $P(x) \in K[x], P \neq 0$ mit $\alpha$ Nullstelle von P,
 also $P(\alpha) = 0$. (Einsetzen ist wohldefiniert, da $\alpha$ in Körper $L$ liegt.)
 Ist $\alpha$ nicht algebraisch über $K$, so heisst $\alpha$ tranzendent über $K$.
 Elemente $\alpha_1, ... \alpha_n \in L$ heissen algebraisch unabhängig über $K$ 
-$\Rightleftarrow$ es exestiert kein Polynom $P(x_1, ... x_n) \in K[x_1, ... x_b]$
+$\Leftrightarrow$ es exestiert kein Polynom $P(x_1, ... x_n) \in K[x_1, ... x_b]$
 ungleich Null mit $P(\alpha_1, ... \alpha_n) = 0$ (vgl. $K$-linear unabhängig mit $P$ linear).
 
 \subsection{Beispiele}
@@ -688,7 +688,7 @@ $e \in \mathbb{R}$ ist tranzendent über $\mathbb{Q}$
 
 \subsection{Definition Algebraische K�rpererweiterung}
 Eine K�rpererweiterung $K \subseteq L$ heisst algebraisch (oder endlich)
-$\Rightleftarrow$ alle $\alpha \in L$ sind algebraisch �ber $K$.
+$\Leftrightarrow$ alle $\alpha \in L$ sind algebraisch �ber $K$.
 
 \subsection{Beispiele}
 \begin{enumerate}[(1)]
@@ -711,8 +711,8 @@ Sei $K \subseteq L$ K�rpererweiterung und $a \in L$. Dann sind folgende Aussagen
 
 \subsection{Beweis}
 \begin{enumerate}[]
-\item[$(1) \Rightarrow (2)$] a algebraisch �ber K $\Rightleftarrow \exists P \in K[x], P \neq 0$
-mit $P(a) = 0 \Rightleftarrow \varepsilon_a$ nicht injektiv.
+\item[$(1) \Rightarrow (2)$] a algebraisch �ber K $\Leftrightarrow \exists P \in K[x], P \neq 0$
+mit $P(a) = 0 \Leftrightarrow \varepsilon_a$ nicht injektiv.
 \item[$(2) \Rightarrow (3)$] Es gilt: $K[a] = Im(\varepsiolon_a) \cong \modulus{K[x]}{Kern(\varepsilon_a)}$
 ( als $K$-Vr mitels Homomorphiesatz). $Kern(\varepsilon_a) = <P>$ ist Hauptideal, 
 f�r ein Polynom $P \in K[x]$. Sei $m = deg(P)$.
