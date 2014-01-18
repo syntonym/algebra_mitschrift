@@ -12,7 +12,7 @@
 \author{Simon Haendeler}
 \maketitle
 %\tableofcontents
-%TODO Sinnvolle Gliederung fÃ¼r den Inhalt (welche Sachen werden in das Inhaltsverzeichnis aufgenommen)
+%TODO Sinnvolle Gliederung für den Inhalt (welche Sachen werden in das Inhaltsverzeichnis aufgenommen)
 \setcounter{chapter}{-1}
 \chapter{Allgemeine Definitionen und Notationen}
 Wir setzen den Begriff der Menge vorraus.
@@ -126,7 +126,7 @@ Sei $m \in \mathbb{Z}$. Definiere $x \sim y :\gdw x-y \in m \mathbb{Z} \gdw m$ t
 Schreibweise $\mathbb{Z}/\sim = \mathbb{Z}/m\mathbb{Z} = \mathbb{Z}_m = \{\bar{0}, \bar{1}, ..., \bar{m-1}\}$
 
 \section{Bemerkung:}
-%TODO Besser formatieren (AbsÃ¤tze)
+%TODO Besser formatieren (Absätze)
 
 Ist $\sim$ eine "Aquivalenzrelation auf $X$, und sei $f: X \to Y$ eine Abbildung, dann existiert eine Induzierte Abbildung $\bar{f}: X/\sim \to Y$ mit kommutativem Diagramm 
 %TODO Menge aller "Aquivalenzklassen sch"oner machen
@@ -138,8 +138,8 @@ genau dann, wenn $\forall x, y \in X $ mit $x \sim y$ gilt: $f(x) = f(y)$.
 Man sagt dann: $f$ faktorisiert "uber $\sim$ oder "uber $X/\!\sim$. Falls $\bar{f}$ exestiert, ist es eindeutig und gegeben durch: $\bar{f}(\bar{x}):=f(x)$
 
 \section{Beweis}
-%TODO Der Beweis ist schlecht formatiert. Insb. Einr"uckungen, AbsÃ¤tze und AbstÃ¤nde
-%TODO Latexzeichen fÃ¼r := und =: einsetzen
+%TODO Der Beweis ist schlecht formatiert. Insb. Einr"uckungen, Absätze und Abstände
+%TODO Latexzeichen für := und =: einsetzen
 
 $\Rightarrow$
 
@@ -284,26 +284,26 @@ Es gilt $\forall A \in GL_n(K) : (\lambda 1_n) A = A*(\lambda 1_n) (!)$
 \item $H \subseteq GL_n(K) \cong GL(K^n)$ Dann ist $H$ normal, wenn $H$ unabhängig von der Wahl einer Basis in $K^n$ definiert werden kann.
 $H$ normal: $\forall A \ in H \forall p \in GL_n(K) PAP^{-1} \in H$
 \item $S_n = Bij(\{1, ... ,n\})$ Permutationsgruppe. Sei $\sigma, \tau \in S_n$ 
-Dann ist $\tau \sigma \tau ^{-1}$ jene Permutation, die man aus $\sigma$ erhÃ¤lt, wenn man die Zahlen $(1, ... ,n)$ mit $\tau$ permutiert (finde Beispiele).
-%TODO Diagramm einfÃ¼gen
+Dann ist $\tau \sigma \tau ^{-1}$ jene Permutation, die man aus $\sigma$ erhält, wenn man die Zahlen $(1, ... ,n)$ mit $\tau$ permutiert (finde Beispiele).
+%TODO Diagramm einfügen
 Sei $H \subseteq S_n$ die Untergruppe jener Permutationen $\sigma \in S_n$ mit $\sigma (1) = 1$ (ist Untergruppe(!)).
-Diese Untergruppe ist nicht normal, da sie von der Nummerierung der Zahlen 1...n abhÃ¤ngt.
+Diese Untergruppe ist nicht normal, da sie von der Nummerierung der Zahlen 1...n abhängt.
 \end{enumerate}
 
 \section{Bemerkung}
-Intuitiv bedeutet normale Untergruppe, dass die Definition unabhÃ¤ngig von der Bennenung der Elemente von $G$ definiert werden kann.
+Intuitiv bedeutet normale Untergruppe, dass die Definition unabhängig von der Bennenung der Elemente von $G$ definiert werden kann.
 
 \section{Definition Faktorgruppe}
 Sei $G$ Gruppe und $H \trianglelefteq G$ normale Untergruppe. 
 Es bezeichnet $G/H := \{xH, x\in G\}$ mit $xH=\{xy, y\in H\}$ die Menge der Rechtsnebenklassen von G modulo H, geschrieben $xH = \bar{x} = [x]$
 (das sind "Aquivalenzklassen von Elementen $x$ von $G$ bzgl. der "Aquivalenzrelation $x \sim z \Leftrightarrow xH=zH (!)$)
 Auf $G/H$ wird durch $(xH)(zH) = (xzH)$ oder auch geschrieben $\bar{x} *\bar{z} = \bar{xz}$, eine Gruppenstruktur definiert.
-$G/H$ mit dieser VerknÃ¼pfung heisst Faktorgruppe von $G$ nach $H$.
+$G/H$ mit dieser Verknüpfung heisst Faktorgruppe von $G$ nach $H$.
 
 \section{Bemerkung:}
 \begin{enumerate}[(a)]
-\item Diese Konstruktion funktioniert nur fÃ¼r normale Untergruppen.
-\item Ist $G$ kommutativ so ist $G/H$ definiert fÃ¼r alle Untergruppen $H$ von $G$.
+\item Diese Konstruktion funktioniert nur für normale Untergruppen.
+\item Ist $G$ kommutativ so ist $G/H$ definiert für alle Untergruppen $H$ von $G$.
 \item Ist die Gruppe $G$ additiv so schreiben wir $\bar{x} = x+H = H+x$. 
 Beispielsweise $(\mathbb{Z}, +)$ mit Restklassengruppe $\mathbb{Z}_K = \mathbb{Z} / K \mathbb{Z} = a+K\mathbb{Z} = \bar{a}$
 \end{enumerate}
@@ -318,7 +318,7 @@ Seien $x,x',z,z' \in G$ mit $xH=x'H$ und $zH=z'H$. Dann ist zu zeigen: $xzH = x'
 \end{enumerate}
 
 \section{Beispiel:}
-%TODO irgendwie unvollstÃ¤ndig oder nicht so sehr verstÃ¤ndlich?
+%TODO irgendwie unvollständig oder nicht so sehr verständlich?
 $A_n = \{$alternierende Permutationen$\} \subseteq S_n$ ist Normalteiler, dann hat $\sigma \in S_n$ $sgn=1$, so auch $\tau \sigma^{-1},$ da $sgn$ multiplikativ ist.
 Damit ist $S_n/A_n$ Faktorgruppe.  (man zeigt leicht: $S_n/A_n \cong (\{\pm 1\},*)$)
 
@@ -328,7 +328,7 @@ $G,H$ Gruppen $f: G\to H$ Abb. heisst Gruppenhomomorphismus/multiplikativ wenn
 \item $f(1_G) = 1_H$
 \item $f(xy) = f(x)f(y) \forall x,y \in G$
 \end{enumerate}
-Die VerknÃ¼pfungen kÃ¶nnen auf $G$ und $H$ ganz verschieden sein, etwa 
+Die Verknüpfungen kÜ¶nnen auf $G$ und $H$ ganz verschieden sein, etwa 
 $f:$ \mbox{$(\mathbb{R},+) \to (\mathbb{R}^*,*);$} \mbox{$x \mapsto exp(x) = e^x$} $f(x+y) = f(x) * f(y)$
 
 \section{Definition Kern und Bild}
@@ -347,10 +347,10 @@ Siehe Proseminar. Hier: $kern(f)$ ist normal.
 
 Sei also $x \in kern(f)$ und $y \in G$. Zu Zeigen: $yxy^{-1}\in kern(f)$. Aber $f(yxy^{-1}) = f(y)f(x)f(y^{-1}) = f(y) 1_H f(y^-1) = f(y)f(y^{-1}) = f(y)f(y)^{-1} = 1_H$
 
-\section{Homomorphiesatz fÃ¼r Gruppen}
+\section{Homomorphiesatz für Gruppen}
 Sei $f: G \to H$ Gruppenhomomorphismus. Dann ist die induzierte Abbildung $\bar{f}: G/kern(f) \to Im(f); \bar{x} \mapsto f(x)$
-ein wohldefinierter Gruppenisomorphismus mit zugehÃ¶rigem kommutativem Diagramm:
-%TODO hier kommutatives Diagramm einfÃ¼gen
+ein wohldefinierter Gruppenisomorphismus mit zugehÜ¶rigem kommutativem Diagramm:
+%TODO hier kommutatives Diagramm einfügen
 
 \subsection{Bemerkung}
 Die kanonische Abbildung $\pi$ $G \to G/kern(f) $ ist ein surjektiver Gruppenhomomorphismus.
@@ -361,15 +361,15 @@ Die kanonische Abbildung $\pi$ $G \to G/kern(f) $ ist ein surjektiver Gruppenhom
 Setze $ K = kern(f)$ dann $ \bar(x) = \bar{z} \Leftrightarrow  xK = zK $ Insbesondere $ \exists y \in K mit x = zy$. 
 Damit ist $f(x) = f(zy) = f(z)f(y) = f(z) 1_H = f(z)$
 
-\item $\bar{f}$ ist Gruppenhomomorphismus. Selbst nachprÃ¼fen(!)
+\item $\bar{f}$ ist Gruppenhomomorphismus. Selbst nachprüfen(!)
 
 \item $\bar{f}$ surjektiv. 
-Sei $w \in Im(f)$ wÃ¤hle $x \in G$ mit $f(x) = w$. 
+Sei $w \in Im(f)$ wähle $x \in G$ mit $f(x) = w$. 
 Dann gilt $\bar{f}(\bar{x}) = f(x) = w$, also ist $f$ surjektiv.
 
 \end{enumerate}
 \section{Definition}
-%TODO <s> besser machen (< und > nÃ¤her an s)
+%TODO <s> besser machen (< und > näher an s)
 %TODO Betragsstriche besser machen
 Sei $G$ eine Gruppe, $s \in G$. 
 Dann bezeichnet $<s>$ die von $s$ erzeugte Untergruppe von G. 
@@ -406,37 +406,37 @@ wobei $G = <s>$ und $|G| = n$
 \begin{enumerate}[(1)]
 \item Sei $H$ eine Untergruppe von $\mathbb{Z}$.
 Falls $H = \{0\}$, so gilt $H = 0\mathbb{Z}$.
-Falls $H \neq \{0\}$, so enthÃ¤lt %hier fehlt was%
+Falls $H \neq \{0\}$, so enthält %hier fehlt was%
 mindestens ein $a \in H$ mit $a \neq 0$ o.B.d.A $a > 0$, den falls a $a < 0$,
 so liegt $-a \in H$ und $-a > 0$. 
-$H$ enhÃ¤lt ein kleinstes positives Element, welches wir mit $a$ o.B.d.A. schon gewÃ¤hlt haben.
+$H$ enhält ein kleinstes positives Element, welches wir mit $a$ o.B.d.A. schon gewählt haben.
 Behauptung: $H = a\mathbb{Z}$. Klarerweise gilt $a \in \mathbb{Z} \subseteq H$
-Sei $h \in H$. wir mÃ¼ssen zeigen $\exists q \in \mathbb{Z}: h = q*a$
+Sei $h \in H$. wir müssen zeigen $\exists q \in \mathbb{Z}: h = q*a$
 Wende die Division mit Rest auf $(h,a)$ an: h = q*a+r mit $q \in \mathbb{Z}, 0\leq r < a$
 Es ist $h,a \in H \to h-qa = r \in H.$
-Wegen der MinimalitÃ¤t von a muss $r = 0$ gelten.
+Wegen der Minimalität von a muss $r = 0$ gelten.
 damit $h = q*a$ und weil $h \in H$ beliebig, folgt $H \subseteq a\mathbb{Z}$
 \item Aus $(1)$ folgt das alle ELemente %Hier fehlt was.
 \item Sei $G$ eine zyklische Gruppe, $G = <s>$. 
 $f: \mathbb{Z} \to G ; k \mapsto s^k$ 
 Dies ist ein Gruppenhomomorphismus von $(\mathbb{Z},+) \to (G,*)$ und surjektiv.
-Sei $H := kern(f)$. Dann ist $H = n\mathbb{Z}$ fÃ¼r ein $n \in \mathbb{N} \cup \{0\}$
+Sei $H := kern(f)$. Dann ist $H = n\mathbb{Z}$ für ein $n \in \mathbb{N} \cup \{0\}$
 \end{enumerate}
 
 \subsection{Korollar:}
 \begin{enumerate}[1)]
 \item Jede Untergruppe einer zyklischen Gruppe ist zyklisch.
 \item Falls $G \cong \mathbb{Z}$ und $G = <s>$, 
-dann gilt $H = <s^m>$ fÃ¼r ein $m \in \mathbb{N} \cup \{0\}$
-\item Falls $G \cong \mathbb{Z}/n\mathbb{Z}$ fÃ¼r ein $n \in \mathbb{N}$ und $G = <s>$,
+dann gilt $H = <s^m>$ für ein $m \in \mathbb{N} \cup \{0\}$
+\item Falls $G \cong \mathbb{Z}/n\mathbb{Z}$ für ein $n \in \mathbb{N}$ und $G = <s>$,
 dann gilt $H = <s^m>$ mit $m|n$
 \end{enumerate}
 \subsection{Beweis}
-$G \cong \mathbb{Z}$. Dann ist $H \cong m\mathbb{Z}$ fÃ¼r ein $m \in \mathbb{N} \cup \{0\}$
+$G \cong \mathbb{Z}$. Dann ist $H \cong m\mathbb{Z}$ für ein $m \in \mathbb{N} \cup \{0\}$
 und diese ist zyklisch $(H=<mk|k\in\mathbb{Z}>)$
 $G = \mathbb{Z}/n\mathbb{Z}$. Dann ist $|G|=n$. Ist $G=<s>$, so ist $s^n = 1_G$
-FÃ¼r $H \leq G$ (H Untergruppe von G), $h,k \in H$ mit $h=s^a$, $k = s^b$,
-so enthÃ¤lt $H$ auch $s^{ggT(a,b)}$
+Für $H \leq G$ (H Untergruppe von G), $h,k \in H$ mit $h=s^a$, $k = s^b$,
+so enthält $H$ auch $s^{ggT(a,b)}$
 Sind $h_1, ..., h_n$ alle Elemente von $H$, mit $H_i = s^{ai}$, 
 so gilt $S^{ggT(a_1,...,a_r)} \in H$ und sogar $<s^{ggT(a_1,...,a_r)}> = H$. 
 Wegen $s^n = 1_G = 1_H \in H$ ist $n \in \{a_1, ... , a_r\}$ 
@@ -449,7 +449,7 @@ Sei $a \in G$ mit $ord_G(a) = n$, dann gilt $ord_G(at) = \frac{n}{ggT(n,t)}$
 \subsection{Beweis}
 Sei $d = ggT(n,t)$ und schreibe $n = dn'$ und $ggT(n',t') = 1$
 Sei $r = ord_G(t)$ %eventuell Fehler hier?
-Dann gilt: $1_G = \binom{t}{a}^r = a^{tr}$ und somit $tr = mn$ fÃ¼r ein $m \in \mathbb{N}$.
+Dann gilt: $1_G = \binom{t}{a}^r = a^{tr}$ und somit $tr = mn$ für ein $m \in \mathbb{N}$.
 Also ist $dt'r = dmn'$ und damit $t'r = mn'$. 
 Damit erhalten wir $n'/t'r$ und wegen $(n', t') = 1$ folgt $n'|r$, insbesondere $n' \leq r$
 Andererseits gilt $(a^t)^{n'} = a^{dt'n'} = {a^n}^{t'} = 1_G$ und somit $r \leq n'$
@@ -467,8 +467,8 @@ $G = \bigcup{\bar{x} \in G}{\bar{x} H} \Rightarrow |G| = |G/H| * |H|$
 \subsection{Definition}
 Sei $G$ eine Gruppe, $S \subseteq G$ eine Teilmenge.
 Dann heisst $<s> = \bigcap{s \leq G}{H}$ die von $S$ erzeugte Untegruppe von $G$.
-(Damit die Definition gerechtfertigt ist, mÃ¼ssen wir nachweisen, dass der Durchschnitt beliebig vieler Untergruppen einer Gruppe wieder eine Untergruppe ist.)
-$Hi \leq G$ fÃ¼r $i \in I \Rightarrow \bigcap{i\in I}{Hi} \leq G$
+(Damit die Definition gerechtfertigt ist, müssen wir nachweisen, dass der Durchschnitt beliebig vieler Untergruppen einer Gruppe wieder eine Untergruppe ist.)
+$Hi \leq G$ für $i \in I \Rightarrow \bigcap{i\in I}{Hi} \leq G$
 $1_G \subseteq Hi$ 
 $\forall i \Rightarrow 1_G \in \bigcap{i\in I}{Hi}$
 Sind $x,y \in \bigcap{i\in I} Hi$, so gilt $x \in Hi, y \in Hi, \forall i\in I $
@@ -476,7 +476,7 @@ und daher auch
 $xy \in Hi, x^{-1} \in H, \forall i \in I$. 
 Dann folgt
 $xy, x^{-1} \in \bigcap{i\in I}{Hi}$
-%Folgendes ist LÃ¼ckenhaft
+%Folgendes ist Lückenhaft
 Exestiert eine Menge $S$ mit $|S| < \inf$ f"ur die $G=<s>$, so [...] endlich erzeugt.
 Achtung: $G$ endlich $\Rightarrow$ $G$ endlich erzeugt
 
@@ -512,7 +512,7 @@ $\phi(a) = \phi(a_1) ... \phi(a_n) $ und falls $a_i \in S^{-1} \phi(a_i) = \phi(
 
 \chapter{Ringe}
 
-2 VerknÃ¼pfungen, meistens $+$ und $*$, mit Distributivgesetz. Wichtigstes Beispiel:
+2 Verknüpfungen, meistens $+$ und $*$, mit Distributivgesetz. Wichtigstes Beispiel:
 \begin{enumerate}[]
 \item $(\mathbb{Z},+,*)$
 \item $(K[x],+,*)$
@@ -527,7 +527,7 @@ $I \subseteq R$, dann gilt: $I$ Ideal in $R$ $\Leftrightarrow$
 $\forall x,y \in I, \forall r \in R$ gilt: $x \pm y \in I$, $rx \in I$ (Insbesondere $xy \in I$)
 
 \subsection{Bemerkung}
-Ideal steht kurz fÃ¼r ideale Zahl beim Ãbergang $k \in \mathbb{Z}$ zur Idealen Zahl $k*\mathbb{Z} \subseteq \mathbb{Z}$
+Ideal steht kurz für ideale Zahl beim übergang $k \in \mathbb{Z}$ zur Idealen Zahl $k*\mathbb{Z} \subseteq \mathbb{Z}$
 \subsection{Definition EZS}
 Sei $I \subseteq R$ Ideal. Eine Teilmenge $X$ von $I$ heisst $R$-Erzeugendensystem (oder Erzeugendensystem von $I$ als Ideal) $\Leftrightarrow$
 Jedes Element $y \in I$ ist endliche $R$-linearkombination von Elementen aus $X$ 
@@ -539,14 +539,14 @@ $I$ heisst endlich erzeugt (als Ideal) $\Leftrightarrow \exists$ endliches EZS $
 \begin{enumerate}[(1)]
 \item $k \mathbb{Z} = \{k*a, a\in \mathbb{Z} \} \subseteq \mathbb{Z}$ Ideal mit EZS $\{K\}$ %TODO ist das wirklich so oder hab ich ich verschrieben?
 $k = 0, k = \pm 1, \mathbb{Z} \subseteq \mathbb{Z}$
-\item $R=K[x]$ Polynomringe in einer Variblen $x$ Ã¼ber Krper $K$. $I=\{p \in K[x], p(0)=0\} \subseteq K[x]$ Ideal
+\item $R=K[x]$ Polynomringe in einer Variblen $x$ über Krper $K$. $I=\{p \in K[x], p(0)=0\} \subseteq K[x]$ Ideal
 \item $R=K[x], I_a = \{p\in K[x], $Untergrad$(P) \geq a\} \subseteq K[x]$ Ideal ($a \in \mathbb{N}$)
-\item $K$ KÃ¶rper insbesondere auch Ring. Die einzigen Ideale sind $I=0$ und $I=K$.
+\item $K$ KÜ¶rper insbesondere auch Ring. Die einzigen Ideale sind $I=0$ und $I=K$.
 \end{enumerate}
 
 \subsection{Definition Summe, Durchschnitt, Produkt, Wurzel}
 \begin{enumerate}[]
-\item Es seien $I,J \subseteq R$ Ideale. Definiere: $I+J := <J,I> = $Erzeugnisse von $I$ und $J$ = kleinstes Ideal von $R$ das $I$ und $J$ enthÃ¤lt
+\item Es seien $I,J \subseteq R$ Ideale. Definiere: $I+J := <J,I> = $Erzeugnisse von $I$ und $J$ = kleinstes Ideal von $R$ das $I$ und $J$ enthält
 = $\{x+y | x \in I, y \in J\}$
 \item $I \cap J = \{x \in R, x \in I$ und $x \in J$ \} Durchschnitt von $I$ und $J$.
 \item $I*J$ = $<x*y, x\in I, y \in J> = \{\sum{i=1}^k r_ix_iy_i, x_i \in I, y_i \in J, r_i \in R\}$
@@ -556,9 +556,9 @@ $I^k$ = $I*I*...*I*$ kte Potenz von $I$
 \end{enumerate}
 
 \subsection{Satz}
-Diese Konstruktionen liefern Ideale von $R$. Beweis Ãbungsaufgae
+Diese Konstruktionen liefern Ideale von $R$. Beweis Übungsaufgae
 \subsection{Beispiele}
-%TODO Formatierung hiervon evtl schÃ¶ner machen?
+%TODO Formatierung hiervon evtl schÜ¶ner machen?
 $R = \mathbb{Z}, I = 6\mathbb{Z}, J = 8\mathbb{Z}, I+J = 6\mathbb{Z} + 8\mathbb{Z} = 2 \mathbb{Z}$
 $I \cap J = 6\mathbb{Z} \cap 8\mathbb{Z} = 24 \mathbb{Z}, I*J = 6\mathbb{Z}*8\mathbb{Z} = 48\mathbb{Z}$
 $\sqrt{I} = 6\mathbb{Z} = I$ $\sqrt{J} = 2\mathbb{Z}$
@@ -605,93 +605,93 @@ $\Leftrightarrow I=\sqrt{I}$
 \chapter{Körpererweiterungen}
 \subsection{Bemerkung}
 
-Unterschied zu beliebigen Ring: In einem KÃ¶rper sind alle Elemente ausser 0 multiplikativ invertierbar.
+Unterschied zu beliebigen Ring: In einem KÜ¶rper sind alle Elemente ausser 0 multiplikativ invertierbar.
 
 \subsection{Bezeichnung}
-Ist $K$ KÃ¶rper, so bezeichne $K[x] = \{ P(x) = \sum{i=0}^d a_i x^i , ai \in K, d\in \mathbb{N}$
-ein Polynomring Ã¼ber $K$ in einer Variblen x mit x Symbol/Platzhalter.
+Ist $K$ KÜ¶rper, so bezeichne $K[x] = \{ P(x) = \sum{i=0}^d a_i x^i , ai \in K, d\in \mathbb{N}$
+ein Polynomring über $K$ in einer Variblen x mit x Symbol/Platzhalter.
 Analog: $K[x_1, ..., x_n] = K[x_1, ... , x_{n-1}][x_n]$ Polynomring in $n$ Variablen.
 
-\subsection{Definition (KÃ¶rper)}
+\subsection{Definition (KÜ¶rper)}
 $K$ kommutativer Ring $\neq 0$ heisst Körper $\Leftrightarrow$ $K^* = \modulus{K}{\{0\}}$ 
 $\Leftrightarrow$ alle Elemente $\neq$ 0 von K sind invertierbar
-(SchiefkÃ¶rper, wenn nicht kommutativ)
+(SchiefkÜ¶rper, wenn nicht kommutativ)
 \subsection{Beispiele}
 \begin{enumerate}[]
 \item $\mathbb{Q}, \mathbb{R}, \mathbb{C}, \modulus{\mathbb{Z}}{p\mathbb{Z}} = \mathbb{F}_p$
 \item $\modulus{R}{m}, R$ Ring, $m \subseteq R$ maximales Ideal.
 \end{enumerate}
 
-Insbesondere: $K$ KÃ¶rper, $K[x]$ HIR, $P \in K[x]$ irreduzibles Polynom $m = <p>$
+Insbesondere: $K$ KÜ¶rper, $K[x]$ HIR, $P \in K[x]$ irreduzibles Polynom $m = <p>$
 von P erzeugtes Ideal ist Primideal und damit auch maximal (da $K[x]$ faktoriell),
-also ist $L := \modulus{K[x]}{m}$ wieder KÃ¶rper. 
-Etwa $K = \mathbb{R}$, $P(x) = x^2 + 1$ irreduzibel Ã¼ber $\mathbb{R}$
+also ist $L := \modulus{K[x]}{m}$ wieder KÜ¶rper. 
+Etwa $K = \mathbb{R}$, $P(x) = x^2 + 1$ irreduzibel über $\mathbb{R}$
 $\modulus{\mathbb{R}[x]}{<x^2 + 1>} = \mathbb{R}[\bar{x}]$
-$\bar{x}$ Restklasse von x erfÃ¼llt die Gleichung $\bar{x}^2 + 1 = 0$, also $\bar{x}^2 = -1$.
+$\bar{x}$ Restklasse von x erfüllt die Gleichung $\bar{x}^2 + 1 = 0$, also $\bar{x}^2 = -1$.
 Damit $\mathbb{R}[\bar{x}] = \mathbb{R}[i] = \mathbb{C} = \mathbb{R} \bigoplus \mathbb{R}i$
 
 \subsection{Notation}
 
 In $\mathbb{Q}$ kann man nicht aus allen positiven Zahlen Wurzeln ziehen,
-zudem ist $\mathbb{Q}$ nicht vollstÃ¤ndig, 
-daher ''Erweiterung'' von $\mathbb{Q}$ auf $\mathbb{R}$ vollstÃ¤ndig.
-Um auch Wurzeln aus negativen Zahlen ziehen zu kÃ¶nnen, erweitert man nochmal von
-$\mathbb{R}$ auf $\mathbb{C}$, vollstÃ¤ndig und algebraisch abgeschlossen 
+zudem ist $\mathbb{Q}$ nicht vollständig, 
+daher ''Erweiterung'' von $\mathbb{Q}$ auf $\mathbb{R}$ vollständig.
+Um auch Wurzeln aus negativen Zahlen ziehen zu kÜ¶nnen, erweitert man nochmal von
+$\mathbb{R}$ auf $\mathbb{C}$, vollständig und algebraisch abgeschlossen 
 (Jedes (nicht konstante) Polynom in $\mathbb{C}[x]$ hat eine Nullstelle in $\mathbb{C}$)
-Also: $\mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{C}$ Inklusionen von KÃ¶rpern.
+Also: $\mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{C}$ Inklusionen von KÜ¶rpern.
 
-\subsection{Definition (KÃ¶rpererweiterung)}
-Sei $L$ ein KÃ¶rper und $K \subseteq L$ ein Unterring 
-(also mit er von $L$ induzierten VerknÃ¼pfung ist $K$ ein Ring)
-$K \subseteq L$ heisst KÃ¶rpererweiterung $\Leftrightarrow$ 
-$K$ ist KÃ¶rper, also bzgl. Inversionsbildung abgeschlossen (mit Ausnahme von 0)
-$\Leftrightarrow$ $K \subseteq L$ ist UnterkÃ¶rper $\Leftrightarrow$ $L$ ist OberkÃ¶rper von $K$.
+\subsection{Definition (KÜ¶rpererweiterung)}
+Sei $L$ ein KÜ¶rper und $K \subseteq L$ ein Unterring 
+(also mit er von $L$ induzierten Verknüpfung ist $K$ ein Ring)
+$K \subseteq L$ heisst KÜ¶rpererweiterung $\Leftrightarrow$ 
+$K$ ist KÜ¶rper, also bzgl. Inversionsbildung abgeschlossen (mit Ausnahme von 0)
+$\Leftrightarrow$ $K \subseteq L$ ist UnterkÜ¶rper $\Leftrightarrow$ $L$ ist OberkÜ¶rper von $K$.
 
 \subsection{Bemerkung}
-Ist $K \subseteq L$ KÃ¶rpererweiterung, so ist $L$ auch $K$-Vektorraum, 
+Ist $K \subseteq L$ KÜ¶rpererweiterung, so ist $L$ auch $K$-Vektorraum, 
 also ist die $K$-Dimension von $L$ definiert. 
 
-\subsection{Definition Grad der KÃ¶rpererweiterung}
+\subsection{Definition Grad der KÜ¶rpererweiterung}
 
-Ist $K \subseteq L$ KÃ¶rpererweiterung, so heisst $[L:K] := dim_KL$ der Grad der KÃ¶rpererweiterung.
-Die KÃ¶rpererweiterung heisst endlich $\Leftrightarrow [L:K] < \inf$
+Ist $K \subseteq L$ KÜ¶rpererweiterung, so heisst $[L:K] := dim_KL$ der Grad der KÜ¶rpererweiterung.
+Die KÜ¶rpererweiterung heisst endlich $\Leftrightarrow [L:K] < \inf$
 
 \subsection{Beispiele}
 \begin{enumerate}[]
 \item $[\mathbb{R}:\mathbb{Q}] = \inf$ (ohne Beweis)
 \item $[\mathbb{C}:\mathbb{R}] = 2$, denn $\mathbb{C} = \mathbb{R} + \mathbb{R}i$
 \item Sei $P(x) \in K[x]$ irreduzibel von Grad $d$. 
-Setze $L = \modulus{K[x]}{<P>}$. KÃ¶rper mit $K \subseteq L$(!), also KÃ¶rperweiterung. 
+Setze $L = \modulus{K[x]}{<P>}$. KÜ¶rper mit $K \subseteq L$(!), also KÜ¶rperweiterung. 
 Aber nach euklidischer Division gilt: 
 $L = \modulus{K[x]}{<P>} \cong K \bigoplus K\bar{x} \bigoplus K\bar{x}^2 ... \bigoplus K\bar{x}^{d-1}$
 Also $[L:K] = d$
 \end{enumerate}
 
 \subsection{Satz}
-Seien $K \subseteq L \subseteq M$ zwei KÃ¶rperweiterungen (eigentlich drei: $K \subseteq L, L \subseteq M, K \subseteq M$).
+Seien $K \subseteq L \subseteq M$ zwei KÜ¶rperweiterungen (eigentlich drei: $K \subseteq L, L \subseteq M, K \subseteq M$).
 Dann gilt: $[M:K] = [M:L] * [L:K]$
 
 \subsection{Beweisidee}
 
-Sei $[M:K] < \inf$. WÃ¤hle $K$-Basis $x_1, ..., x_l$ von $L$ und $L$-Basis $y_1, ... y_m$ von $M$.
-Zeige dann, dass die Produkte $x_iy_j$ fÃ¼r $1 \leq i \leq l$, $1 \leq j \leq m$ 
-eine $K$-Basis von $M$ bildet (EZS und K-linear unabhÃ¤ngig).
+Sei $[M:K] < \inf$. Wähle $K$-Basis $x_1, ..., x_l$ von $L$ und $L$-Basis $y_1, ... y_m$ von $M$.
+Zeige dann, dass die Produkte $x_iy_j$ für $1 \leq i \leq l$, $1 \leq j \leq m$ 
+eine $K$-Basis von $M$ bildet (EZS und K-linear unabhängig).
 
 \subsection{Definition (algebraische Elemente)}
 
-Sei $K \subseteq L $ KÃ¶rpererweiterug und $\alpha \in L$ ein Element.
-$\alpha$ heisst algebraisch Ã¼ber $K$ (oder algebraisch abhÃ¤ngig Ã¼ber $K$)
+Sei $K \subseteq L $ KÜ¶rpererweiterug und $\alpha \in L$ ein Element.
+$\alpha$ heisst algebraisch über $K$ (oder algebraisch abhängig über $K$)
 $\Leftrightarrow$ $\exists$ Polynom $P(x) \in K[x], P \neq 0$ mit $\alpha$ Nullstelle von P,
-also $P(\alpha) = 0$. (Einsetzen ist wohldefiniert, da $\alpha$ in KÃ¶rper $L$ liegt.)
-Ist $\alpha$ nicht algebraisch Ã¼ber $K$, so heisst $\alpha$ tranzendent Ã¼ber $K$.
-Elemente $\alpha_1, ... \alpha_n \in L$ heissen algebraisch unabhÃ¤ngig Ã¼ber $K$ 
+also $P(\alpha) = 0$. (Einsetzen ist wohldefiniert, da $\alpha$ in KÜ¶rper $L$ liegt.)
+Ist $\alpha$ nicht algebraisch über $K$, so heisst $\alpha$ tranzendent über $K$.
+Elemente $\alpha_1, ... \alpha_n \in L$ heissen algebraisch unabhängig über $K$ 
 $\Leftrightarrow$ es exestiert kein Polynom $P(x_1, ... x_n) \in K[x_1, ... x_b]$
-ungleich Null mit $P(\alpha_1, ... \alpha_n) = 0$ (vgl. $K$-linear unabhÃ¤ngig mit $P$ linear).
+ungleich Null mit $P(\alpha_1, ... \alpha_n) = 0$ (vgl. $K$-linear unabhängig mit $P$ linear).
 
 \subsection{Beispiele}
-$\pi \in \mathbb{R}$ ist tranzendent Ã¼ber $\mathbb{Q}$.
-($\pi$ erfÃ¼llt keine polynomische Gleichung mit Koeffizienten in $\mathbb{Q}$)(Lindemann)
-$e \in \mathbb{R}$ ist tranzendent Ã¼ber $\mathbb{Q}$
+$\pi \in \mathbb{R}$ ist tranzendent über $\mathbb{Q}$.
+($\pi$ erfüllt keine polynomische Gleichung mit Koeffizienten in $\mathbb{Q}$)(Lindemann)
+$e \in \mathbb{R}$ ist tranzendent über $\mathbb{Q}$
 
 \subsection{Definition Algebraische Körpererweiterung}
 Eine Körpererweiterung $K \subseteq L$ heisst algebraisch (oder endlich)
