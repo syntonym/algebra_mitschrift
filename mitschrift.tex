@@ -935,9 +935,48 @@ wobei die Nullstellen mit Vielfachheit gezählt werden).
 %Anfang Seite 4/4 14.1.14
 
 \subsection{Bemerkung}
-$P \in K[x], P = c \prod_{i=1}^{m}{(x-a_i)^{k_i}$ mit $a_i \in L$
+$P \in K[x], P = c \prod_{i=1}^{m}{(x-a_i)}^{k_i}$ mit $a_i \in L$
 alle verschieden. $k_i \in \mathbb{N}, k_i \geq 1, \sum_{i=1}^{m}{k_i} a = deg(P)$.
-$k_i$ heissen Vielfachheiten der Nullstelle $a_i \in L$ von $P$.
+$k_i$ heissen Vielfachheiten der Nullstelle $a_i \in L$ von $P$. 
+
+\subsection{Beweis}
+\begin{enumerate}[(1)]
+\item[t=0:] Nichts zu zeigen, $K$ ist ZFK der $(P_i)_{i \in I}$
+\item[t>0:] Sei $i \in I$ mit $deg(P_i)>0$. Schreibe $P_{i_0} = PQ$ mit $PQ \in K[x]$ und $P$ irreduzibel.
+Wir wissen: $K' = \modulus{K[x]}{<P>}$ besitzt Nullstelle $a$ von $P$,
+also auch von $P_{i_0}$. Damit ist $P_{i_0} = (x-a)\bar{P}_{i_0}$ mit $\bar{P}_{i_0} \in K'[x]$.
+Dann gilt $\sum_{i=i_0}{deg(P_i)}$ und $deg(\bar{P}_{i_0}) < t$.
+Induktionsanfang angewandt auf $P_i$, $i \neq i_0$ und $\bar{P}_{i_0}$.
+Dann exestiert eine Körpererweiterung $K' \subseteq K''$, 
+so dass alle $P_i i \neq i_0$ und $\bar{P}_{i_0}$ über $K''$ in Linearfaktoren zerfallen.
+Da $a \in K' \subseteq K''$ folgt, dass alle $P_i$ über $K''$ in Linearfaktoren zerfallen.
+Wähle nun $L \subseteq K''$ minimal mit dieser Eigenschaft. Dann ist $L$ ZFK der $(P_i)_{i \in I}$ über $K$.
+\end{enumerate}
+
+\subsection{Folgerung}
+Ist $P \in K[x]$ beliebiges (nicht nativ irreduzibel) Polynom,
+so exestiert ein ZFK $K'$ von $P$ über $K$, $P=c \prod_{i=1}^{a}{(x-a_i)}$ mit $c, a_i \in K'$, 
+nämlich $K'=K(a_1, ..., a_d)$, und $K'$ ist bis auf Isomorphie eindeutig, Beweis siehe letzten Satz.
+
+\subsection{Satz (algebraisch abgeschlossener Körper)}
+Für einen Körper $K$ sind folgende Eigenschaften äquivalent:
+\begin{enumerate}[(1)]
+\item Jedes Polynom $P \in K[x]$ zerfällt bereits über $K$ in Linearfaktoren, also $P = c\prod_{i=1}^{d}{(x-a_i)}$
+mit $c, a_i \in K$
+\item Jedes Polynom $P \in K[x]$, $P$ nicht konstant, besitzt in $K$ mindestens eine Nullstelle $a \in K, P(a) = 0$.
+\item Die irreduziblen Polynome $P \in K[x]$ sind alle linear.
+\item Ist $K \subseteq L$ algebraische Körpererweiterung, so ist $L=K$ (es gibt nur triviale algebraische Körpererweiterungen)
+\end{enumerate}
+
+\subsection{Definition}
+Körper $K$, die (1)-(4) erfüllen, heissen algebraisch abgeschlossen.
+
+\subsection{Beispiele}
+\begin{enumerate}[(1)]
+\item $\mathbb{Q}$ und $\mathbb{R}$ sind nicht algebraisch abgeschlossen.
+\item $\mathbb{C}$ ist algebraisch abgeschlossen (hier ohne Beweis) (via Satz von Liouville).
+\item $\mathbb{Z}_p$ ist nicht algebraisch abgeschlossen ($p$ prim).
+
 
 \end{document}
 
