@@ -979,5 +979,41 @@ Körper $K$, die (1)-(4) erfüllen, heissen algebraisch abgeschlossen.
 \item $\mathbb{Z}_p$ ist nicht algebraisch abgeschlossen ($p$ prim).
 \end{enumerate}
 
+%ANFANG 1/4 21.4.14
+
+\section{Satz (Existenz des ZFK)}
+Sei $K$ Körper und $(P_i)_{i \in I}$ Polynome in $K[x]$, $I$ beliebige Indexmenge, $P_i$ nicht konstant.
+Dann exestiert eine algebraische Körpererweiterung $K \subseteq L$, 
+so dass jedes $P_i$ mindestens eine Nullstelle $a_i$ in $L$ besitzt
+(Man kann $L=K(a_i, i \in I)$ wählen).
+
+\subsection{Beweis (Skizze)}
+Idee: Konstruiere $L$ als Faktorring eiens Polynomringes $K[x_i, i\in I]$
+in unendlich vielen Variablen $x_i$, nach einem maximalen Ideal $M \subseteq K[x_i]$.
+$K[x_i]$ sind Polynome in jeweils endlich vielen $x_i$.
+Definiere das Ideal $\mathcal{A} = <P_i(x_i), i \in I> \subseteq K[x_i]$ (setze in $P$ $x_i$ ein).
+Dann ist $1 \in \mathcal{A}$, also exestiert $J \subseteq I$ endliche Teilmenge und
+$Q_j \in K[x_i]$ $\forall j \in J$ mit $1 = \sum_{j \in J}{Q_jP_j(x_j)}$.
+Setze aber ($\exists$ ZFK für endlich viele Polynome) $\eists K \subseteq K'$ Körpererweiterung
+mit $K'$ ZFK der $P_j$, insbesondere exestieren $a_j \in K'$ mit $P_j(a_j) = 0$.
+Einsetzen von $a_j$ für $x_j$ in $1 = \sum Q_jP_j(x_j)$ liefert $1 = \sum{\bar{Q}_jP_j(a_j) = 0$,
+offensichtlich ein Widerspruch.
+Also ist $\mathcal{A} \neq K[x_i]$ echtes Ideal. Wende Lemma von Zorn an:
+$\exists$ maximales Ideal $\mathcal{M}$ mit $\mathcal{A} \subseteq \mathcal{M} \subseteq \[x_i]$ (nicht konstruktiv).
+Wir erhlaten einen Körper $L := \modulus{K[x_i]}{\mathcal{M}}$. Setze $a_i = \bar{x_i} \in L$.
+Dann gilt für alle $i \in I$ $P_i(a_i) = P_i(\bar{a_i}) = \bar{P_i(x_i)} = 0$ in $L$.
+Also besitzen alle $P_i$ in $L$ eine Nullstelle, und nach KOnstruktion ist $L = K[a_i] = K(a_i)$ da $a_i$
+algebraisch über $K$.
+
+\section{Satz}
+$K$ Körper, $P \in K[t]$ Polynom, $P \neq konstant$ $\Rightarrow$ 
+ZFK von $P_i$ ist eindeutig bis auf Isomorphie.
+
+\subsection{Beweis}
+Die Existenz des ZFK ist bereits gezeigt. Sei also $K'$, $K''$ zwei ZFK von $P$ über $K$.
+Zu zeigen: $K' \cong K''$. Wir machen Induktion über $[K':K]$. Sei $[K':K] = 1$
+$\Rightarrow$ $K' = K$ $\Rightarrow$ $K' \subseteq K'' \Rightarrow K'=K''$
+Sei also $[K':K] > 1$. Wähle irreduzible Faktoren $Q$ von $P$ von Grad $\geq 2$. 
+Setze $K[x] = \modulus{K[t]}{<Q(t)>}$.
 \end{document}
 
